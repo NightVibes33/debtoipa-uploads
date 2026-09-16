@@ -1,0 +1,88 @@
+name: KillerPlus official analysis
+on:
+  push:
+    branches: [temp-killerplus-free-20260916]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: temp-killerplus-free-20260916
+      - name: Download and extract official arm64 packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf official-work official-reports official-extracted
+          mkdir -p official-work official-reports official-extracted
+          curl -fL --retry 3 -A 'Cydia/1.1.36' 'https://repo.ikghd.me/debs/me.ikghd.ytkplus_6.5.4_iphoneos-arm64.deb' -o official-work/YTKillerPlus_6.5.4_arm64.deb
+          curl -fL --retry 3 -A 'Cydia/1.1.36' 'https://repo.ikghd.me/debs/me.ikghd.ttkplus_2.2.1_iphoneos-arm64.deb' -o official-work/TTKillerPlus_2.2.1_arm64.deb
+
+          extract_deb() {
+            local deb="$1" root="$2"
+            mkdir -p "$root" "$root/.ar"
+            (cd "$root/.ar" && ar -x "$(cd "$(dirname "$deb")" && pwd)/$(basename "$deb")")
+            local data
+            data=$(find "$root/.ar" -maxdepth 1 -type f -name 'data.tar*' | head -1)
+            test -n "$data"
+            tar -xf "$data" -C "$root"
+            rm -rf "$root/.ar"
+          }
+          extract_deb official-work/YTKillerPlus_6.5.4_arm64.deb official-work/ytk
+          extract_deb official-work/TTKillerPlus_2.2.1_arm64.deb official-work/ttk
+          find official-work/ytk official-work/ttk -type f -print | sort > official-reports/files.txt
+      - name: Analyze current dylibs
+        shell: bash
+        run: |
+          set -euo pipefail
+          : > official-reports/machos.tsv
+          mkdir -p official-reports/bin
+          while IFS= read -r -d '' f; do
+            typ=$(file -b "$f" || true)
+            [[ "$typ" == *Mach-O* ]] || continue
+            rel=${f#official-work/}; safe=$(printf '%s' "$rel" | tr '/ ' '__')
+            sha=$(shasum -a 256 "$f" | awk '{print $1}'); sz=$(stat -f '%z' "$f")
+            printf '%s\t%s\t%s\t%s\n' "$rel" "$sz" "$sha" "$typ" | tee -a official-reports/machos.tsv
+            mkdir -p "official-extracted/$(dirname "$rel")"; cp -p "$f" "official-extracted/$rel"
+            otool -ov "$f" > "official-reports/bin/$safe.objc.txt" 2>&1 || true
+            otool -tvV "$f" > "official-reports/bin/$safe.disasm.txt" 2>&1 || true
+            nm -nm "$f" > "official-reports/bin/$safe.nm.txt" 2>&1 || true
+            strings -a -t x "$f" > "official-reports/bin/$safe.strings.txt" 2>&1 || true
+            {
+              echo "FILE=$rel"; echo "SIZE=$sz"; echo "SHA256=$sha"; echo "TYPE=$typ"
+              echo '=== LOADS ==='; otool -L "$f" 2>&1 || true
+              echo '=== FILTERED STRINGS ==='; grep -Eai 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd|register|code|expire|server|api|https?://' "official-reports/bin/$safe.strings.txt" || true
+              echo '=== FILTERED OBJC ==='; grep -Eai -B12 -A24 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd|register|code|expire|server|api' "official-reports/bin/$safe.objc.txt" || true
+              echo '=== FILTERED NM ==='; grep -Eai 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd|register|code|expire|server|api' "official-reports/bin/$safe.nm.txt" || true
+            } > "official-reports/bin/$safe.focus.txt"
+          done < <(find official-work/ytk official-work/ttk -type f -print0)
+
+          echo '=== MACHOS ==='; cat official-reports/machos.tsv
+          echo '=== FOCUSED HITS ==='
+          grep -RInaE 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|register|expire|server|api' official-reports/bin/*.focus.txt | head -n 3000 || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: killerplus-official-analysis
+          path: official-reports
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: killerplus-official-dylibs
+          path: official-extracted
+          retention-days: 7
+      - name: Commit focused reports
+        shell: bash
+        run: |
+          set -e
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          rm -rf official-analysis && mkdir official-analysis
+          cp official-reports/machos.tsv official-analysis/
+          cp official-reports/files.txt official-analysis/
+          find official-reports/bin -name '*.focus.txt' -exec cp {} official-analysis/ \;
+          git add official-analysis
+          if ! git diff --cached --quiet; then git commit -m 'temp: current KillerPlus focused analysis'; git push; fi
