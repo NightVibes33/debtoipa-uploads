@@ -1,0 +1,173 @@
+name: KillerPlus reproducible patch kit
+
+on:
+  push:
+    branches: [temp-killerplus-free-20260916]
+    paths:
+      - .github/workflows/killerplus-patchkit.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  patch:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download exact current packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/ytk work/ttk out
+          curl -fL --retry 3 -A 'Cydia/1.1.36' \
+            'https://repo.ikghd.me/debs/me.ikghd.ytkplus_6.5.4_iphoneos-arm64.deb' \
+            -o work/YTKillerPlus_6.5.4_arm64.deb
+          curl -fL --retry 3 -A 'Cydia/1.1.36' \
+            'https://repo.ikghd.me/debs/me.ikghd.ttkplus_2.2.1_iphoneos-arm64.deb' \
+            -o work/TTKillerPlus_2.2.1_arm64.deb
+
+          echo '85d585bb4f4e9c77bd07cd357c1bc775c46f31c4efc316d4024bb6261e7733c8  work/YTKillerPlus_6.5.4_arm64.deb' | shasum -a 256 -c -
+          echo '21fb05daf6e46b568847297649cd514f33b93bdf44c5a8e734b906410b52d17e  work/TTKillerPlus_2.2.1_arm64.deb' | shasum -a 256 -c -
+
+      - name: Extract dylibs
+        shell: bash
+        run: |
+          set -euo pipefail
+          extract_deb() {
+            local deb="$1" root="$2"
+            local abs
+            abs="$(cd "$(dirname "$deb")" && pwd)/$(basename "$deb")"
+            mkdir -p "$root/.ar"
+            (cd "$root/.ar" && ar -x "$abs")
+            local data
+            data="$(find "$root/.ar" -maxdepth 1 -type f -name 'data.tar*' -print -quit)"
+            test -n "$data"
+            tar -xf "$data" -C "$root"
+            rm -rf "$root/.ar"
+          }
+          extract_deb work/YTKillerPlus_6.5.4_arm64.deb work/ytk
+          extract_deb work/TTKillerPlus_2.2.1_arm64.deb work/ttk
+
+          YTK="$(find work/ytk -type f -name 'YTKPlus.dylib' -print -quit)"
+          TTK="$(find work/ttk -type f -name 'TTKPlus.dylib' -print -quit)"
+          test -f "$YTK" && test -f "$TTK"
+
+          echo '2e526a0a0260d544b05ff5ba2c136099eab30f35118714c8912744fa238795f4' > /tmp/ytk.expected
+          echo 'f01de74d85231ee34d4ef321fc0cef84496f09c97635387da052b27ebeadb3f8' > /tmp/ttk.expected
+          test "$(shasum -a 256 "$YTK" | awk '{print $1}')" = "$(cat /tmp/ytk.expected)"
+          test "$(shasum -a 256 "$TTK" | awk '{print $1}')" = "$(cat /tmp/ttk.expected)"
+
+          cp "$YTK" out/YTKPlus-Free-6.5.4.dylib
+          cp "$TTK" out/TTKPlus-Free-2.2.1.dylib
+
+      - name: Apply targeted free-mode patches
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+
+          RET = bytes.fromhex('c0035fd6')
+          files = {
+            'out/YTKPlus-Free-6.5.4.dylib': {
+              0x105570:'iKarwanYTKIcon checkAuthenticationStatus',
+              0x11d850:'iKarwanYTKLicense promptForEmail',
+              0x11e694:'iKarwanYTKLicense promptForActivation',
+              0x11f8a0:'iKarwanYTKLicense promptForRestore',
+              0x120198:'iKarwanYTKLicense promptForLicenseKeyWithEmail:',
+              0x121ce4:'iKarwanYTKLicense restoreLicenseWithEmail:',
+              0x126358:'iKarwanYTKLicense authenticateUserWithEmail:licenseKey:',
+              0x12f800:'iKarwanYTKLicense verifyLicenseWithEmail:licenseKey:deviceIdentifier:',
+              0x1340ac:'iKarwanYTKLicense showInvalidLicenseText',
+              0x146f48:'iKarwanYTKsettings _setupActivationCell:',
+              0x11bd80:'ModernWebViewController handlePaymentWithScheme:method:',
+              0x11be54:'ModernWebViewController handleBuyNewPayment:',
+              0x11bf04:'ModernWebViewController handleRenewalPayment:',
+              0x11bf48:'ModernWebViewController handleStoreBuyPayment:',
+              0x11bf8c:'ModernWebViewController handleStoreAddPayment:',
+              0x11c070:'ModernWebViewController loadPaymentURL:openExternally:',
+            },
+            'out/TTKPlus-Free-2.2.1.dylib': {
+              0x4c15c:'DownloadsControllerttk checkAuthenticationStatus',
+              0x42db0:'DownloadsControllerttk promptForEmail',
+              0x43bf4:'DownloadsControllerttk promptForActivation',
+              0x44e48:'DownloadsControllerttk promptForRestore',
+              0x45740:'DownloadsControllerttk promptForLicenseKeyWithEmail:',
+              0x46ccc:'DownloadsControllerttk restoreLicenseWithEmail:',
+              0x496a0:'DownloadsControllerttk authenticateUserWithEmail:licenseKey:',
+              0x4b358:'DownloadsControllerttk verifyLicenseWithEmail:licenseKey:deviceIdentifier:',
+              0x4d1a4:'DownloadsControllerttk showInvalidLicenseText',
+              0x53a64:'RootOptionsController _setupActivationCell:',
+              0x419ec:'ModernWebViewController handlePaymentWithScheme:method:',
+              0x41ac0:'ModernWebViewController handleBuyNewPayment:',
+              0x41b70:'ModernWebViewController handleRenewalPayment:',
+              0x41bb4:'ModernWebViewController handleStoreBuyPayment:',
+              0x41bf8:'ModernWebViewController handleStoreAddPayment:',
+              0x41cdc:'ModernWebViewController loadPaymentURL:openExternally:',
+            },
+          }
+          manifest = {'files': {}}
+          for name, patchmap in files.items():
+              p = Path(name)
+              data = bytearray(p.read_bytes())
+              original_sha = hashlib.sha256(data).hexdigest()
+              rows=[]
+              for off, method in patchmap.items():
+                  before=bytes(data[off:off+4])
+                  if len(before) != 4:
+                      raise SystemExit(f'{name}: offset 0x{off:x} out of range')
+                  # Guard against accidentally re-patching an already-patched input.
+                  if before == RET:
+                      raise SystemExit(f'{name}: 0x{off:x} already RET; source mismatch')
+                  data[off:off+4]=RET
+                  rows.append({'offset':hex(off),'method':method,'before':before.hex(),'after':RET.hex()})
+              p.write_bytes(data)
+              manifest['files'][p.name] = {
+                  'source_sha256': original_sha,
+                  'patched_sha256': hashlib.sha256(data).hexdigest(),
+                  'size': len(data),
+                  'patch_count': len(rows),
+                  'patches': rows,
+              }
+          Path('out/patch-manifest.json').write_text(json.dumps(manifest,indent=2))
+          PY
+
+          test "$(shasum -a 256 out/YTKPlus-Free-6.5.4.dylib | awk '{print $1}')" = '99c44186a34294a729afeb9574f28c6cdb03be6280eef0af73e40f09b2e2e637'
+          test "$(shasum -a 256 out/TTKPlus-Free-2.2.1.dylib | awk '{print $1}')" = '29926c0455d1f920e60ab19a2639a8372c9fb2dd08a43e23d45f91689295bc45'
+
+      - name: Validate binaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in out/*.dylib; do
+            file "$f"
+            lipo -archs "$f"
+            otool -hv "$f" | head -20
+            test "$(lipo -archs "$f")" = 'arm64'
+          done
+          python3 - <<'PY'
+          import json
+          m=json.load(open('out/patch-manifest.json'))
+          assert len(m['files']) == 2
+          assert all(v['patch_count']==16 for v in m['files'].values())
+          print('manifest validation: PASS')
+          PY
+          shasum -a 256 out/*.dylib > out/SHA256SUMS.txt
+          (cd out && zip -9 KillerPlus-Free-Patched-Dylibs.zip YTKPlus-Free-6.5.4.dylib TTKPlus-Free-2.2.1.dylib patch-manifest.json SHA256SUMS.txt)
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KillerPlus-Free-Patched-Dylibs
+          path: |
+            out/YTKPlus-Free-6.5.4.dylib
+            out/TTKPlus-Free-2.2.1.dylib
+            out/patch-manifest.json
+            out/SHA256SUMS.txt
+            out/KillerPlus-Free-Patched-Dylibs.zip
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
