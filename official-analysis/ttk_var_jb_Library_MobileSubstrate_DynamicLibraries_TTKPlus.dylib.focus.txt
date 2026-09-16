@@ -1,0 +1,1674 @@
+FILE=ttk/var/jb/Library/MobileSubstrate/DynamicLibraries/TTKPlus.dylib
+SIZE=812544
+SHA256=f01de74d85231ee34d4ef321fc0cef84496f09c97635387da052b27ebeadb3f8
+TYPE=Mach-O 64-bit dynamically linked shared library arm64
+=== LOADS ===
+official-work/ttk/var/jb/Library/MobileSubstrate/DynamicLibraries/TTKPlus.dylib:
+	@rpath/TTKPlus.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 4201.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 4201.0.0)
+	/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 9126.2.4)
+	/System/Library/Frameworks/AVFoundation.framework/AVFoundation (compatibility version 1.0.0, current version 2.0.0)
+	/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)
+	/System/Library/Frameworks/VideoToolbox.framework/VideoToolbox (compatibility version 1.0.0, current version 3290.6.1)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)
+	/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics (compatibility version 64.0.0, current version 1965.2.3)
+	/System/Library/Frameworks/CoreMedia.framework/CoreMedia (compatibility version 1.0.0, current version 3290.6.1)
+	/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony (compatibility version 1.0.0, current version 0.0.0)
+	/System/Library/Frameworks/CoreVideo.framework/CoreVideo (compatibility version 1.2.0, current version 726.2.0)
+	/System/Library/Frameworks/ImageIO.framework/ImageIO (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/Photos.framework/Photos (compatibility version 1.0.0, current version 822.0.130)
+	/System/Library/Frameworks/QuartzCore.framework/QuartzCore (compatibility version 1.2.0, current version 1193.47.1)
+	/System/Library/Frameworks/Security.framework/Security (compatibility version 1.0.0, current version 61901.60.40)
+	/System/Library/Frameworks/WebKit.framework/WebKit (compatibility version 1.0.0, current version 623.1.14)
+	@rpath/CydiaSubstrate.framework/CydiaSubstrate (compatibility version 0.0.0, current version 0.0.0)
+=== FILTERED STRINGS ===
+760b1 BDADeviceHelper
+760c1 UIDevice
+760fb IESLiveDeviceInfo
+76138 TTAdSplashDeviceHelper
+761d0 FBSDKAppEventsDeviceInfo
+76236 ACCDeviceInfo
+76491 /usr/libexec/sftp-server
+764d4 /usr/sbin/frida-server
+76904 activator
+76990 receipt
+76998 me.ikghd.ttkplus.secure
+76dfe TOAST_INVALID_IMAGE_SIZE
+76ee9 SDImageWebPCoder
+776b8 ttk_auth_device_secure
+7773a ttk_auth_expires_secure
+7779d ttk_HasAcknowledgedSubscription
+777e5 Your TTKillerPlus license expires in %@.
+7780f Please renew at repo.ikghd.me to avoid losing access.
+779f6 This version has been disabled. Please reinstall from repo.ikghd.me
+77a8a https://repo.ikghd.me
+77b60 https://apps.apple.com/app/tiktok/id835599320
+77bf1 ttk_auth_email_secure
+77c07 ttk_auth_license_secure
+77c6c action=verify&email=%@&licenseKey=%@&deviceIdentifier=%@&timestamp=%@
+77cb2 ikghd.site
+77cf4 Unable to verify server identity.
+77d16 valid
+77d1c expires
+77d46 license_verification_failed
+77df1 authenticatedEmail
+77e04 authenticatedLicenseKey
+77e1c authenticatedDeviceIdentifier
+77eac device_model
+77f13 device_name
+77f48 https://ikghd.site/TTK/log/installation.php
+77fc6 ttk_activation_logged_for_key
+77fe4 license_key
+77ff0 activation
+77ffb https://ikghd.site/TTK/log/log_activation.php
+78499 authorCountryCode
+784ab countryCode
+784d2 isoCountryCode
+78ef7 aweme_main_qrcode_download_m_dark_Normal
+7911d DL_RESTORE_DISPLAY
+79177 TOAST_DISPLAY_RESTORED
+793a7 https://www.tiktok.com/
+7957c code
+79868 REGION_STATUS_ACTIVE_TITLE
+79883 REGION_STATUS_INACTIVE_TITLE
+798c1 REGION_HOOK_NOT_ACTIVE
+7990c REGION_FOOTER_ACTIVE
+7993f ttk_unlink_last_ts
+79968 paymentHandler
+7997d <!DOCTYPE html><html><head><meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'><meta charset='utf-8'><style>* { -webkit-user-select: none; -webkit-touch-callout: none; box-sizing: border-box; }body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; margin: 0; padding: 20px; text-align: center; background-color: #F3F3F3; min-height: 100vh; }h2 { font-size: 28px; margin-bottom: 15px; font-weight: 700; color: #1d1d1f; display: flex; justify-content: center; align-items: center; }h2 span { margin-left: 10px; display: none; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #333; border-radius: 50%; animation: spin 1s linear infinite; }@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }p { font-size: 16px; line-height: 1.5; margin-bottom: 20px; color: #6e6e73; }.button { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 400px; margin: 15px auto; padding: 16px 20px; border: none; border-radius: 12px; font-size: 17px; cursor: pointer; position: relative; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }.button:active { transform: scale(0.98); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }.button.disabled { opacity: 0.5; pointer-events: none; }.button img { width: 32px; height: 32px; position: absolute; left: 20px; }.button span { margin: 0 auto; }.paypal { background-color: #FDC44F; color: #003087; }.card { background-color: #6771E5; color: white; }.crypto { background-color: #474C49; color: white; }.store { background-color: #05b0d4; color: white; }.storeadd { background-color: #006B76; color: white; }.divider { margin: 30px auto; display: flex; align-items: center; max-width: 400px; }.divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #d2d2d7; }.divider span { padding: 0 15px; color: #6e6e73; font-weight: 600; }</style><script>let isProcessing = false;function pay(method, scheme) {if (isProcessing) return;isProcessing = true;const spinner = document.querySelector('h2 span');if (spinner) spinner.style.display = 'inline-block';const buttons = document.querySelectorAll('.button');buttons.forEach(btn => btn.classList.add('disabled'));try {window.webkit.messageHandlers.paymentHandler.postMessage({scheme: scheme,method: method});} catch (e) {console.error('Payment handler error:', e);window.location.href = scheme + '://payment?method=' + method;}}</script></head>
+7a3c1 https://www.paypal.com/ncp/payment/6EBRVQUSAEMRG
+7a3f7 https://buy.stripe.com/3cIeVc68t4Nja7W8Tp6c01g
+7a426 https://ikghd.site/btc.html
+7a442 https://www.paypal.com/ncp/payment/PP238QDP5S8PS
+7a473 https://buy.stripe.com/14A7sK7cx2Fbcg44D96c01f
+7a4a2 https://ikghd.site/stor/payment
+7a4c2 https://ikghd.site/stor/payment_add_more
+7a4eb https://ikghd.site
+7a4fe https://buy.stripe.com/6oEbKeeXggYP5d6eVm
+7a528 Invalid payment URL
+7a5c7 license_option
+7a5d6 license_option_disc
+7a5ea activate_new_license
+7a5ff restore_license
+7a61f https://ikghd.site/retrieve.php
+7a63f renew_license
+7a64d buy_license
+7a65d https://ikghd.site/faq.html
+7a687 https://ikghd.site/terms.html
+7a6a5 activate_new_license_disc
+7a6d5 email
+7a6db activate
+7a6e4 invalid_email
+7a6f2 invalid_email_disc
+7a705 invalid_license
+7a715 license_key_empty
+7a727 license_key_length_wrong
+7a740 restore_notice
+7a74f restore_notice_desc
+7a763 restore_license_disc
+7a778 restore
+7a780 enter_license_key
+7a792 enter_license_key_disc
+7a7dd action=check_email&email=%@&timestamp=%@
+7a80c Failed to process server response.
+7a82f emailExists
+7a83b action=restore&email=%@&deviceIdentifier=%@&timestamp=%@
+7a87c licenseKey
+7a8a1 license_details
+7a8b1 license_details_disc
+7a8c6 license_restored_successfully
+7a8e4 license_expired
+7a8f4 unlink_email
+7a901 copy_license_key
+7a91d license_key_copied_to_clipboard
+7a943 restore_failed
+7a952 You can only unlink once per week. Try again in %@.
+7a98f unlink_confirmation
+7a9a3 unlink_email_explanation
+7a9bc unlink
+7a9c3 https://ikghd.site/TTK/update_key.php
+7aa1d key=%@&email=
+7aa2b error_unlink
+7aa38 error_unlink_desc
+7aa4a success_unlink
+7aa59 success_unlink_desc
+7aa6d action=authenticate&email=%@&licenseKey=%@&deviceIdentifier=%@&timestamp=%@
+7aac7 license_key_authenticated
+7aafb key_used_on_another_device
+7ab2c key_is_in_use_on_another_device
+7ab4c email_associated_with_another_key
+7ab6e email_associated_with_defferent_key
+7ab92 key_expired
+7ab9e license_expired_disc
+7abf4 license_disc
+7ac84 promptForEmail
+7aca0 FCUUIDsOfUserDevicesDidChangeNotification
+7ace1 fc_uuidForDevice
+7acf2 fc_uuidsOfUserDevices
+7ad08 fc_uuidsOfUserDevicesToggle
+7ad26 Invalid uuid to migrate
+7ada4 uuidsOfUserDevices
+7adf2 me.ikghd.ttkiconchange
+7ae6a TTKillerPlus
+7b703 ikghd_profile
+7b758 https://www.twitter.com/ikg_hd
+7b86e Inactive (Verify License)
+7b945 server
+7ba2e the server property must not to be nil, should use 'keyChainStoreWithServer:protocolType:' initializer to instantiate keychain store
+7bb87 Unavailable 'UICKeyChainStoreAccessibilityWhenPasscodeSetThisDeviceOnly' attribute on iOS versions prior to 8.0.
+7c015 T@"NSArray",&,N,V_regionCodes
+7c1c9 T@"NSURL",R,N,V_server
+7c479 handlePaymentWithScheme:method:
+7c4bd initWithActivityIndicatorStyle:
+7c678 removeObserver:
+7c843 setRegionCodes:
+7ccee _server
+7ce19 T@"UIActivityIndicatorView",&,N,V_activityIndicator
+7d450 _activityIndicator
+7d630 ttk_resolveCode
+7d7ed _pipo_isJailBrokenDeviceWithProductID:orderID:
+7d889 _regionCodes
+7d973 _setupActivationCell:
+7d9e1 _uuidForDevice
+7da20 _uuidsOfUserDevices
+7da34 _uuidsOfUserDevices_iCloudAvailable
+7db6d activateConstraints:
+7db82 activityIndicator
+7dcb3 addObserver:selector:name:object:
+7df0f appStoreReceiptURL
+7dfc9 applicationDidBecomeActive:
+7e15c authenticateUserWithEmail:licenseKey:
+7e577 checkEmailAndProceed:
+7e5fe clientBatchMarkConversationsAsRead:sendToServer:
+7e62f clientMarkConversationAsRead:sendToServer:
+7e65a clientMarkConversationAsRead:tillMessagePullIndex:serverMessageID:sendToServer:
+7e6c8 code
+7ec01 collectionView:sceneActivationConfigurationForItemAtIndexPath:point:
+7f5eb currentDevice
+7f78b decodedImageWithData:options:
+7fbb2 errorWithDomain:code:userInfo:
+7fe84 getPaymentURLForMethod:type:
+7fef8 handleBuyNewPayment:
+7ffab handleRenewalPayment:
+7ffc1 handleStoreAddPayment:
+7ffd8 handleStoreBuyPayment:
+8027e initWithActivityItems:applicationActivities:
+802d4 initWithBase64EncodedString:options:
+8032e initWithCoder:
+804c9 initWithServer:protocolType:
+804e6 initWithServer:protocolType:authenticationType:
+806cd invalidate
+80709 isAppStoreReceiptSandbox
+807b3 isJailbrokenWithSkipAdvancedJailbreakValidation:
+8089e isValidEmail:
+808ac isValidLicenseKey:
+808e9 isoCountryCode
+8091b keyChainStoreWithServer:protocolType:
+80941 keyChainStoreWithServer:protocolType:authenticationType:
+80aaa loadPaymentURL:openExternally:
+80b65 logActivation
+80c6c mobileCountryCode
+80c7e mobileNetworkCode
+81357 promptForActivation
+8136b promptForEmail
+8137a promptForLicenseKeyWithEmail:
+81398 promptForRestore
+814e0 regionCodes
+814ec registerClass:forCellWithReuseIdentifier:
+81516 registerForNotifications
+81809 removeObserver:name:object:
+81a11 restoreLicenseWithEmail:
+81ad7 saveAuthenticationState:withExpirationDate:email:licenseKey:deviceIdentifier:sessionToken:timestamp:
+81eba server
+81ec1 serverMarkConversationAsRead:tillPullIndex:readBadgeCount:trackerReason:
+81fbb setActivityIndicator:
+8284e setIsoCountryCode:
+83381 settingsTkVerify
+833d2 sharedCoder
+835f1 showInvalidLicenseText
+83674 showRestoreProcessChangedAlert
+836fe showUnlinkConfirmationForKey:email:device:
+83842 statusCode
+84de2 unlinkEmailFromKey:email:device:
+84e03 unregisterFromNotifications
+85062 uuidForDevice
+85070 uuidForDeviceMigratingValue:commitMigration:
+8509d uuidForDeviceMigratingValueForKey:commitMigration:
+850d0 uuidForDeviceMigratingValueForKey:service:accessGroup:commitMigration:
+85117 uuidForDeviceMigratingValueForKey:service:commitMigration:
+85152 uuidForDevice_updateWithValue:
+851ae uuidValueIsValid:
+851c0 uuidsOfUserDevices
+851d3 uuidsOfUserDevicesExcludingCurrentDevice
+851fc uuidsOfUserDevices_iCloudChange:
+8521d uuidsOfUserDevices_iCloudInit
+8523b uuidsOfUserDevices_iCloudSync
+85259 uuidsOfUserDevices_updateWithValue:
+852bf verifyLicenseWithEmail:licenseKey:deviceIdentifier:
+852f3 verifyLicenseWithEmail:licenseKey:deviceIdentifier:completion:
+856c8 webView:didReceiveServerRedirectForProvisionalNavigation:
+857be webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:
+9315d @"UIWindowSceneActivationConfiguration"48@0:8@"UICollectionView"16@"NSIndexPath"24{CGPoint=dd}32
+941ff @"UIActivityIndicatorView"
+=== FILTERED OBJC ===
+                    name    0x43934 (0xb9470)
+                    types   0x1ddf6 (0x93936) v40@0:8@16q24@32
+                    imp     0x0
+                    name    0x43930 (0xb9478)
+                    types   0x1cd11 (0x9285d) v40@0:8@16@24@32
+                    imp     0x0
+                optionalClassMethods 0x0
+                instanceProperties 0x0
+        ivars          0xb4c20
+            entsize   32
+            count     2
+            offset    0xb9a00 8
+            name      0x7d889 _regionCodes
+            type      0x932b3 @"NSArray"
+            alignment 3
+            size      8
+            offset    0xb9a04 16
+            name      0x7d99d _tableView
+            type      0x93a84 @"UITableView"
+            alignment 3
+            size      8
+        weakIvarLayout 0x0
+        baseProperties 0xb4c68
+            entsize    16
+            count      6
+            name       0x814e0 regionCodes
+            attributes 0x7c015 T@"NSArray",&,N,V_regionCodes
+            name       0x83c6d tableView
+            attributes 0x7cb4a T@"UITableView",&,N,V_tableView
+            name       0x80031 hash
+            attributes 0x7d266 TQ,R
+            name       0x83afa superclass
+            attributes 0x7beff T#,R
+            name       0x7f86d description
+            attributes 0x7c0f7 T@"NSString",R,C
+            name       0x7f77a debugDescription
+            attributes 0x7ccf6 T@"NSString",?,R,C
+Meta Class
+    isa        0x0 _OBJC_METACLASS_$_NSObject
+    superclass 0x0 _OBJC_METACLASS_$_UIViewController
+    cache      0x0 __objc_empty_cache
+    vtable     0x0
+    data       0xb4bd8
+        flags          0x195 RO_META RO_HAS_CXX_STRUCTORS
+        instanceStart  40
+        instanceSize   40
+        reserved       0x0
+        ivarLayout     0x0
+        name           0x925bb CountryTable
+        baseMethods    0x0
+        baseProtocols  0xb4bb8
+--
+            count     5
+            offset    0xb9a08 8
+            name      0x7d551 _checkoutMode
+            type      0x941f0 Q
+            alignment 3
+            size      8
+            offset    0xb9a0c 16
+            name      0x7da73 _webView
+            type      0x941f2 @"WKWebView"
+            alignment 3
+            size      8
+            offset    0xb9a10 24
+            name      0x7d450 _activityIndicator
+            type      0x941ff @"UIActivityIndicatorView"
+            alignment 3
+            size      8
+            offset    0xb9a14 32
+            name      0x7ca54 _errorLabel
+            type      0x9421a @"UILabel"
+            alignment 3
+            size      8
+            offset    0xb9a18 40
+            name      0x7d8de _retryButton
+            type      0x932e7 @"UIButton"
+            alignment 3
+            size      8
+        weakIvarLayout 0x0
+        baseProperties 0xb4f88
+            entsize    16
+            count      9
+            name       0x7ca60 webView
+            attributes 0x7c50f T@"WKWebView",&,N,V_webView
+            name       0x7db82 activityIndicator
+            attributes 0x7ce19 T@"UIActivityIndicatorView",&,N,V_activityIndicator
+            name       0x7fba7 errorLabel
+            attributes 0x7c3a1 T@"UILabel",&,N,V_errorLabel
+            name       0x81a44 retryButton
+            attributes 0x7c21a T@"UIButton",&,N,V_retryButton
+            name       0x7e58d checkoutMode
+            attributes 0x7c626 TQ,N,V_checkoutMode
+            name       0x80031 hash
+            attributes 0x7d266 TQ,R
+            name       0x83afa superclass
+            attributes 0x7beff T#,R
+            name       0x7f86d description
+            attributes 0x7c0f7 T@"NSString",R,C
+            name       0x7f77a debugDescription
+            attributes 0x7ccf6 T@"NSString",?,R,C
+Meta Class
+    isa        0x0 _OBJC_METACLASS_$_NSObject
+    superclass 0x0 _OBJC_METACLASS_$_UIViewController
+    cache      0x0 __objc_empty_cache
+    vtable     0x0
+    data       0xb4e98
+        flags          0x195 RO_META RO_HAS_CXX_STRUCTORS
+        instanceStart  40
+        instanceSize   40
+        reserved       0x0
+--
+            size      8
+            offset    0xb9a28 24
+            name      0x7d9f0 _uuidForInstallation
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a2c 32
+            name      0x7da11 _uuidForVendor
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a30 40
+            name      0x7d9e1 _uuidForDevice
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a34 48
+            name      0x7da20 _uuidsOfUserDevices
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a38 56
+            name      0x7da34 _uuidsOfUserDevices_iCloudAvailable
+            type      0x932a0 B
+            alignment 0
+            size      1
+        weakIvarLayout 0x0
+        baseProperties 0x0
+Meta Class
+    isa        0x0 _OBJC_METACLASS_$_NSObject
+    superclass 0x0 _OBJC_METACLASS_$_NSObject
+    cache      0x0 __objc_empty_cache
+    vtable     0x0
+    data       0xb5138
+        flags          0x195 RO_META RO_HAS_CXX_STRUCTORS
+        instanceStart  40
+        instanceSize   40
+        reserved       0x0
+        ivarLayout     0x0
+        name           0x92660 FCUUID
+        baseMethods    0x73b00
+            entsize 12 (relative)
+            count   14
+            name    0x44b88 (0xb8690)
+            types   0x1ec71 (0x9277d) @16@0:8
+            imp     0xfffdab54 (0x4e664)
+            name    0x45054 (0xb8b68)
+--
+            size      8
+            offset    0xb9a78 24
+            name      0x7d91f _service
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a7c 32
+            name      0x7d43b _accessGroup
+            type      0x942dd @"NSString"
+            alignment 3
+            size      8
+            offset    0xb9a80 40
+            name      0x7ccee _server
+            type      0x932ff @"NSURL"
+            alignment 3
+            size      8
+            offset    0xb9a84 48
+            name      0x7d87b _protocolType
+            type      0x9336a q
+            alignment 3
+            size      8
+            offset    0xb9a88 56
+            name      0x7c853 _authenticationType
+            type      0x9336a q
+            alignment 3
+            size      8
+            offset    0xb9a8c 64
+            name      0x7c7ef _accessibility
+            type      0x9336a q
+            alignment 3
+            size      8
+            offset    0xb9a90 72
+            name      0x7c82d _authenticationPolicy
+            type      0x941f0 Q
+            alignment 3
+            size      8
+            offset    0xb9a94 80
+--
+            alignment 3
+            size      8
+        weakIvarLayout 0x0
+        baseProperties 0xb5940
+            entsize    16
+            count      13
+            name       0x808fd itemClass
+            attributes 0x7d36c Tq,R,N,V_itemClass
+            name       0x7d347 service
+            attributes 0x7c118 T@"NSString",R,N,V_service
+            name       0x7daa0 accessGroup
+            attributes 0x7cd19 T@"NSString",R,N,V_accessGroup
+            name       0x81eba server
+            attributes 0x7c1c9 T@"NSURL",R,N,V_server
+            name       0x813a9 protocolType
+            attributes 0x7c741 Tq,R,N,V_protocolType
+            name       0x7e1ac authenticationType
+            attributes 0x7c715 Tq,R,N,V_authenticationType
+            name       0x7daac accessibility
+            attributes 0x7c69e Tq,N,V_accessibility
+            name       0x7e182 authenticationPolicy
+            attributes 0x7c65a TQ,R,N,V_authenticationPolicy
+            name       0x84f97 useAuthenticationUI
+            attributes 0x7d243 TB,N,V_useAuthenticationUI
+            name       0x83b69 synchronizable
+            attributes 0x7d21d TB,N,V_synchronizable
+            name       0x7e197 authenticationPrompt
+            attributes 0x7cc9a T@"NSString",&,N,V_authenticationPrompt
+            name       0x7cd75 allKeys
+            attributes 0x7beef T@"NSArray",R,N
+            name       0x7ddc8 allItems
+            attributes 0x7beef T@"NSArray",R,N
+Meta Class
+    isa        0x0 _OBJC_METACLASS_$_NSObject
+    superclass 0x0 _OBJC_METACLASS_$_NSObject
+    cache      0x0 __objc_empty_cache
+    vtable     0x0
+    data       0xb5790
+--
+00000000000b96c8 0x0 _OBJC_CLASS_$_AVMutableComposition
+00000000000b96d0 0x0 _OBJC_CLASS_$_AVAssetExportSession
+00000000000b96d8 0x0 _OBJC_CLASS_$_NSMutableString
+00000000000b96e0 0x0 _OBJC_CLASS_$_NSDateFormatter
+00000000000b96e8 0x0 _OBJC_CLASS_$_NSLocale
+00000000000b96f0 0x0 _OBJC_CLASS_$_NSTimeZone
+00000000000b96f8 0x0 _OBJC_CLASS_$_NSMutableURLRequest
+00000000000b9700 0x0 _OBJC_CLASS_$_NSURLSessionConfiguration
+00000000000b9708 0x0 _OBJC_CLASS_$_NSJSONSerialization
+00000000000b9710 0x0 _OBJC_CLASS_$_NSMutableData
+00000000000b9718 0x0 _OBJC_CLASS_$_NSDate
+00000000000b9720 0x0 _OBJC_CLASS_$_NSCharacterSet
+00000000000b9728 0x0 _OBJC_CLASS_$_UIDevice
+00000000000b9730 0x0 _OBJC_CLASS_$_UIImpactFeedbackGenerator
+00000000000b9738 0x0 _OBJC_CLASS_$_UIViewController
+00000000000b9740 0x0 _OBJC_CLASS_$_NSHTTPURLResponse
+00000000000b9748 0x0 _OBJC_CLASS_$_UINavigationController
+00000000000b9750 0xb9ce8
+00000000000b9758 0xb9f18
+00000000000b9760 0x0 _OBJC_CLASS_$_NSHTTPCookieStorage
+00000000000b9768 0x0 _OBJC_CLASS_$_NSURLCache
+00000000000b9770 0x0 _OBJC_CLASS_$_NSObject
+00000000000b9778 0x0 _OBJC_CLASS_$_UIStackView
+00000000000b9780 0x0 _OBJC_CLASS_$_UITapGestureRecognizer
+00000000000b9788 0xb9b58
+00000000000b9790 0x0 _OBJC_CLASS_$_UISheetPresentationControllerDetent
+00000000000b9798 0x0 _OBJC_CLASS_$_UIPasteboard
+00000000000b97a0 0x0 _OBJC_CLASS_$_UIActivityViewController
+00000000000b97a8 0xb9ba8
+00000000000b97b0 0xb9bf8
+00000000000b97b8 0x0 _OBJC_CLASS_$_UITableView
+00000000000b97c0 0x0 _OBJC_CLASS_$_UIBarButtonItem
+00000000000b97c8 0x0 _OBJC_CLASS_$_CTTelephonyNetworkInfo
+00000000000b97d0 0x0 _OBJC_CLASS_$_UITableViewCell
+00000000000b97d8 0x0 _OBJC_CLASS_$_WKWebViewConfiguration
+00000000000b97e0 0x0 _OBJC_CLASS_$_WKUserContentController
+00000000000b97e8 0x0 _OBJC_CLASS_$_WKWebView
+00000000000b97f0 0x0 _OBJC_CLASS_$_UIActivityIndicatorView
+00000000000b97f8 0x0 _OBJC_CLASS_$_NSURLRequest
+00000000000b9800 0x0 _OBJC_CLASS_$_UINavigationBar
+00000000000b9808 0x0 _OBJC_CLASS_$_UINavigationBarAppearance
+00000000000b9810 0x0 _OBJC_CLASS_$_UIAction
+00000000000b9818 0xb9c98
+00000000000b9820 0xb9d38
+00000000000b9828 0x0 _OBJC_CLASS_$_NSPredicate
+00000000000b9830 0xb9e78
+00000000000b9838 0x0 _OBJC_CLASS_$_NSMutableDictionary
+00000000000b9840 0x0 _OBJC_CLASS_$_NSMutableOrderedSet
+00000000000b9848 0x0 _OBJC_CLASS_$_NSException
+00000000000b9850 0x0 _OBJC_CLASS_$_NSUbiquitousKeyValueStore
+00000000000b9858 0x0 _OBJC_CLASS_$_CABasicAnimation
+00000000000b9860 0x0 _OBJC_CLASS_$_CATransition
+00000000000b9868 0xb9db0
+00000000000b9870 0x0 _OBJC_CLASS_$_UISegmentedControl
+00000000000b9878 0x0 _OBJC_CLASS_$_UIImageSymbolConfiguration
+00000000000b9880 0x0 _OBJC_CLASS_$_UIBezierPath
+00000000000b9888 0xb9c48
+00000000000b9890 0x0 _OBJC_CLASS_$_NSCalendar
+00000000000b9898 0x0 _OBJC_CLASS_$_NSByteCountFormatter
+00000000000b98a0 0x0 _OBJC_CLASS_$_NSThread
+00000000000b98a8 0xb9e00
+00000000000b98b0 0x0 _OBJC_CLASS_$_NSError
+--
+00000000000b9960 0xb9db0
+00000000000b9968 0xb9e78
+00000000000b9970 0xb9ec8
+00000000000b9978 0xb9f18
+00000000000b9980 0xb9fb8
+00000000000b9988 0xb9fe0
+00000000000b9990 0xb9f40
+00000000000b9998 0xb9f68
+00000000000b99a0 0xb9f90
+Contents of (__DATA_CONST,__objc_catlist) section
+00000000000b10b0 0xb5a60
+    name      0x92660 FCUUID
+    cls       0x0 _OBJC_CLASS_$_UIDevice
+    instanceMethods 0x73ae8
+        entsize 12 (relative)
+        count   1
+        name    0x45078 (0xb8b68)
+        types   0x1ec89 (0x9277d) @16@0:8
+        imp     0xfffef958 (0x63450)
+    classMethods 0x0
+    protocols 0x0
+    instanceProperties 0x0
+Contents of (__DATA_CONST,__objc_protolist) section
+00000000000b10b8 0xba100
+    isa       0x0
+    name      0x92541 NSObject
+    protocols 0x0
+    instanceMethods 0x756f0
+        entsize 12 (relative)
+        count   19
+        name    0x42250 (0xb7948)
+        types   0x1d06e (0x9276a) B24@0:8@16
+        imp     0x0
+        name    0x4398c (0xb9090)
+        types   0x1d06d (0x92775) #16@0:8
+        imp     0x0
+        name    0x43988 (0xb9098)
+--
+        name    0x42e48 (0xb8e10)
+        types   0x1ca9e (0x92a6a) v32@0:8@16@24
+        imp     0x0
+    classMethods 0x0
+    optionalInstanceMethods 0x0
+    optionalClassMethods 0x0
+    instanceProperties 0x0
+Contents of (__DATA,__objc_selrefs) section
+    0x7fc33 fileExistsAtPath:isDirectory:
+    0x80822 isReadableFileAtPath:
+    0x808d3 isWritableFileAtPath:
+    0x7e442 canOpenURL:
+    0x7dfc9 applicationDidBecomeActive:
+    0x807a6 isJailBroken
+    0x7e3a2 btd_isJailBroken
+    0x807b3 isJailbrokenWithSkipAdvancedJailbreakValidation:
+    0x7d7ed _pipo_isJailBrokenDeviceWithProductID:orderID:
+    0x80775 isFromAppStore
+    0x80709 isAppStoreReceiptSandbox
+    0x806e8 isAppExtension
+    0x80743 isDebugBuild
+    0x83764 signInfo
+    0x806f7 isAppStoreChannel
+    0x80bef mainbundleIdentifier
+    0x7da8b acc_bundleIdentifier
+    0x819bc resetCollectMode
+    0x7d448 setMode
+    0x7d2e4 sandboxEnableAgTransitionDyeing
+    0x81ab6 sandboxEnableAgProcessorDyeingV2
+    0x837cc start
+    0x80279 init
+    0x8536a viewDidLoad
+    0x7e6bc closeTapped
+    0x7c6ec selectAllTapped
+    0x7fa22 downloadTapped
+    0x833d2 sharedCoder
+    0x7f78b decodedImageWithData:options:
+    0x84afc ttkDismiss
+    0x84b14 ttkSavePhoto
+    0x7ffa0 handlePan:
+    0x7ffef handleTap
+    0x7ff6a handleLongPress:
+    0x80ec2 onTouchPrimed
+    0x7c3ed dealloc
+    0x7df9e application:didFinishLaunchingWithOptions:
+    0x80a08 layoutSubviews
+    0x81585 reload
+    0x84ce5 ttk_profileTabLongPressed:
+    0x84b92 ttk_cleanerTimerFired:
+    0x84efa updateLabelConstraints
+    0x800c6 hitTest:withEvent:
+    0x84d5e ttk_scheduleFlag
+    0x84d4f ttk_removePill
+    0x84c53 ttk_insertFlag
+    0x7d630 ttk_resolveCode
+    0x84c19 ttk_flagTap:
+    0x84d34 ttk_reinstallProfileBadges
+    0x7d059 downloadSession
+    0x825ee setDownloadSession:
+    0x84aed ttkDLScheduled
+    0x8327d setTtkDLScheduled:
+    0x84ba9 ttk_dlTapped:
+    0x84c3c ttk_getModel
+    0x84c49 ttk_getVC
+    0x7dae1 acnt_showOnKeyWindowWithMessage:
+    0x80368 initWithDictionary:error:
+    0x812cf progressBarDraggable
+    0x812e4 progressBarVisible
+    0x82cd0 setRichContentIsViewed:
+    0x82721 setHasViewedBefore:
+    0x80a4f liveStreamURLJSONTransformer
+    0x8155b relatedLiveJSONTransformer
+    0x81449 rawModelFromLiveRoomModel:
+    0x7cdcf aweLiveRoom_subModelPropertyKey
+    0x7c2cd configWithUser:
+    0x7f23e configWithUser:isLogSent:
+    0x84c26 ttk_followBadgeTapped
+    0x84c06 ttk_flagPillTapped
+    0x84b7e ttk_bioLongPressed:
+--
+    0x80f9f p_shouldReportProfileView
+    0x80f78 p_shouldReportHasVeiwedProfileForUser:
+    0x818b8 reportProfileView
+    0x853b2 visit:
+    0x80b9b logCanNotRepostProfileViewIfNeed
+    0x80b73 logCanNotReportHasVeiwedProfileForUser:
+    0x80a80 loadComponentView
+    0x84f6c updateUI
+    0x84b67 ttk_avatarLongPressed:
+    0x7f1d6 configWithModel:isMine:
+    0x7f1ee configWithModel:isMine:repostModel:repostNoteBubbleModel:repostStyle:cellWidth:
+    0x7d20d prepareForReuse
+    0x8284e setIsoCountryCode:
+    0x83c43 systemRegion
+    0x80ae2 localRegion
+    0x814d9 region
+    0x80c3f mccmnc
+    0x83868 storeRegion
+    0x7cf80 currentRegionV2
+    0x7c8c0 setStoreRegion:
+    0x7feca getStoreRegion
+    0x80b18 localizedCountryName
+    0x828f1 setLocalizedCountryName:
+    0x82c90 setRegion:
+    0x7fea1 getRegion
+    0x83874 storeRegionFromCache
+    0x7f5cd currentAppRegion
+    0x822f9 setCurrentAppRegion:
+    0x7f44a containerWillDisplay
+    0x7f40d containerDidFullyDisplayWithReason:
+    0x84d8d ttk_storyMarkSeenTapped
+    0x8147a refreshStoryUserStateWithAwemes:source:
+    0x814a2 refreshStoryUserStateWithAwemes:source:extraLogString:
+    0x7d647 updateStoryStatusChangeForUser:
+    0x80fb9 p_updateReadInfoWith:metaData:filterInfo:userID:
+    0x7fcde fixupMarkRead:
+    0x7c606 refreshStoryReadStateWithAweme:
+--
+    0x818ca reportStoryViewedWithStoryID:uid:completion:
+    0x818f7 reportStoryViewedWithStoryID:uid:unlocked:completion:
+    0x84f58 updateState:reason:
+    0x84f4b updateState:
+    0x80f42 p_configWithUserState:
+    0x7fd6b forceFlushAllRead
+    0x83334 setViewed:
+    0x82713 setHasViewed:
+    0x7e25a beginAnimateScrollToOffset:autoAdvanced:interval:
+    0x7dd70 advanceAnimatedScroll
+    0x85392 viewWillDisappear:
+    0x84ccc ttk_markConversationRead
+    0x7e62f clientMarkConversationAsRead:sendToServer:
+    0x7e65a clientMarkConversationAsRead:tillMessagePullIndex:serverMessageID:sendToServer:
+    0x7e5fe clientBatchMarkConversationsAsRead:sendToServer:
+    0x7e3b3 bumpReadIndexTo:forConversation:force:
+    0x81020 pbumpReadIndexTo:forConversation:force:
+    0x81ec1 serverMarkConversationAsRead:tillPullIndex:readBadgeCount:trackerReason:
+    0x7fbe5 exitButtonTapped
+    0x7f431 containerPrepareForReuse
+    0x81e99 sendEvent:
+    0x85358 viewDidDisappear:
+    0x81175 playerWillLoopPlay:
+    0x853b9 warningImage
+    0x853c6 warningLabel
+    0x84e86 updateContent:
+    0x83642 showMask
+    0x82e0d setShowMask:
+    0x80e8b onFollowViewClicked:
+    0x7f9eb doubleTapLikeWithAnimation:
+    0x80eae onLikeButtonClicked
+    0x80ea0 onLikeAction:
+    0x83753 showWithMessage:
+    0x8369f showSuccess:
+    0x8086d isStoryCard
+    0x7cbd1 URLList
+    0x81158 playItem
+    0x806a2 interactionController
+    0x85338 videosCount
+    0x7e227 awemeCount
+    0x80735 isCurrentUser
+    0x847b7 testCurrentRegion
+    0x81a50 retryLoading
+    0x7d673 viewWillAppear:
+    0x84ab2 traitCollectionDidChange:
+    0x851fc uuidsOfUserDevices_iCloudChange:
+    0x83608 showLanguagePicker
+    0x7fff9 handleYesGesture:
+    0x835e0 showIconSelector
+    0x7fd5d footerTapped:
+    0x8499f toggleHideFriends:
+    0x8498d toggleHideCreate:
+    0x849b2 toggleHideInbox:
+    0x84960 toggleFollowBadge:
+    0x84a38 toggleVideoCount:
+    0x848e4 toggleAvatarLongPress:
+    0x848fb toggleBioLongPress:
+    0x848c8 toggleAnonymousProfileView:
+    0x848b9 toggleAdBlock:
+    0x84923 toggleCountryPill:
+    0x7d5cf toggleGridDate:
+    0x8490f toggleClearDisplay:
+    0x80bbc loopModeChanged:
+    0x84936 toggleDisableWarnings:
+    0x84a1d toggleSkipRecommendations:
+    0x849e2 toggleLikeConfirmation:
+    0x84973 toggleFollowConfirmation:
+    0x849c3 toggleLikeCommentConfirmation:
+    0x8494d toggleDownloadBtn:
+    0x849fa toggleLiveAutoClick:
+    0x7c9ac toggleStoryEye:
+    0x84a0f toggleMsgEye:
+    0x819cd resetFooterTapCount
+    0x7c964 suspend
+    0x7e6aa closeButtonTapped
+    0x8032e initWithCoder:
+    0x7ff47 handleGraceTimer:
+    0x7ff7b handleMinShowTimer:
+    0x7ff59 handleHideTimer:
+    0x800e5 hudWasHidden:
+    0x84e74 updateConstraints
+    0x84f2a updateProgressFromProgressObject
+    0x83823 statusBarOrientationDidChange:
+    0x7bedb CGColor
+    0x7cad5 CGImage
+    0x7bee3 HUDForView:
+    0x7cadd JSONObjectWithData:options:error:
+    0x7bf7c URL
+    0x7c790 URLByAppendingPathComponent:
+    0x7d3fa URLQueryAllowedCharacterSet
+    0x7c7b5 URLWithString:
+    0x7d426 UUID
+    0x7c7d4 UUIDString
+    0x7ca68 _getOrCreateValueForKey:defaultValue:userDefaults:keychain:service:accessGroup:synchronizable:
+    0x7d695 _getValueForKey:userDefaults:keychain:service:accessGroup:
+    0x7d928 _setValue:forKey:userDefaults:keychain:service:accessGroup:synchronizable:
+    0x7d973 _setupActivationCell:
+    0x7da58 _viewControllerForAncestor
+    0x7da7c absoluteString
+    0x7daba accessibilityLabel
+    0x7dacd accessibilityObject
+    0x7cd38 actionSheetControllerWithTitle:
+    0x7db02 actionWithHandler:
+    0x7db15 actionWithStyle:title:subtitle:image:imageLabel:handler:
+    0x7db4e actionWithTitle:style:handler:
+    0x7db6d activateConstraints:
+    0x7db82 activityIndicator
+    0x7db94 addAction:
+    0x7db9f addAction:forControlEvents:
+    0x7dbbb addAnimation:forKey:
+    0x7dbd0 addArcWithCenter:radius:startAngle:endAngle:clockwise:
+    0x7dc07 addConstraint:
+    0x7c133 addConstraints:
+    0x7dc16 addGestureRecognizer:
+    0x7dc2c addIndex:
+    0x7dc36 addIndexesInRange:
+    0x7dc49 addInput:
+    0x7dc53 addMotionEffect:
+    0x7dc64 addMutableTrackWithMediaType:preferredTrackID:
+    0x7dc93 addObject:
+    0x7dc9e addObjectsFromArray:
+    0x7dcb3 addObserver:selector:name:object:
+    0x7dcd5 addScriptMessageHandler:name:
+    0x7dcf3 addSubview:
+    0x7dcff addTarget:action:forControlEvents:
+    0x7dd22 addTextFieldWithConfigurationHandler:
+    0x7dd48 addTimer:forMode:
+    0x7dd5a addToRunLoop:forMode:
+    0x7dd86 alertControllerWithTitle:message:preferredStyle:
+    0x7ddb7 allControlEvents
+    0x7ddc8 allItems
+    0x7ddfe allTouches
+    0x7de09 allValues
+    0x7de13 alpha
+    0x7de19 animateIn:withType:completion:
+    0x7de38 animateWithDuration:delay:options:animations:completion:
+    0x7de71 animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:
+    0x7ded7 animation
+    0x7dee1 animationType
+    0x7deef animationWithKeyPath:
+    0x7df05 anyObject
+    0x7df0f appStoreReceiptURL
+    0x7df22 appearance
+    0x7df2d appearanceWhenContainedInInstancesOfClasses:
+    0x7df5a appendFormat:
+    0x7df68 appendPixelBuffer:withPresentationTime:
+    0x7df90 appendString:
+    0x7cd9e applyIconTheme:
+    0x7dfe5 applyPriority:toConstraints:
+    0x7e002 areCustomIconsAvailable
+    0x7e01a areDefaultMotionEffectsEnabled
+    0x7e039 argumentError:
+    0x7e048 arrangedSubviews
+    0x7e059 array
+    0x7c18a arrayWithArray:
+    0x7e05f arrayWithCapacity:
+    0x7e072 arrayWithObject:
+    0x7e083 arrayWithObjects:
+    0x7e095 arrayWithObjects:count:
+    0x7e0ad assetWithURL:
+    0x7e0bb assetWriterInputPixelBufferAdaptorWithAssetWriterInput:sourcePixelBufferAttributes:
+    0x7e10f assetWriterInputWithMediaType:outputSettings:
+    0x7e13d attributesWithKey:value:error:
+    0x7e15c authenticateUserWithEmail:licenseKey:
+    0x7e1bf authenticationTypeObject
+    0x7e1e4 availableLanguages
+    0x7e1f7 avatarLarger
+    0x7e204 avatarMedium
+    0x7e211 avatarThumb
+    0x7e21d avatarURL
+    0x7e232 axis
+    0x7e237 backgroundTintColor
+    0x7e24b backgroundView
+    0x7e28c bestURLtoDownload
+    0x7e29e bezelConstraints
+    0x7e2af bezelMotionEffects
+    0x7e2c2 bezelView
+    0x7e2cc bezierPath
+    0x7e2d7 bezierPathWithRoundedRect:cornerRadius:
+    0x7e2ff blackColor
+    0x7c1b9 blurEffectStyle
+    0x7e30a body
+    0x7e30f boldSystemFontOfSize:
+    0x7e325 boolForKey:
+    0x7e331 boolValue
+    0x7e33b bottomAnchor
+    0x7e348 bottomSpacer
+    0x7e355 boundingRectWithSize:options:attributes:context:
+--
+    0x7e4ef characterSetWithCharactersInString:
+    0x7e52d checkAuthenticationStatusAndProceed
+    0x7e551 checkCompatibility:iOS:symbol:status:
+    0x7e58d checkoutMode
+    0x7e59a childViewControllers
+    0x7e5b5 clearAuthenticationState
+    0x7e5ce clearCaches
+    0x7e5da clearColor
+    0x7c239 clearDirectory:
+    0x7e5e5 clearKeychain
+    0x7e5f3 clickTimer
+    0x7ce9f clicksRemaining
+    0x7e6c8 code
+    0x7e6cd collectionView
+    0x7f0ca color
+    0x7f0d0 colorNamed:
+    0x7f0dc colorWithAlphaComponent:
+    0x7f0f5 colorWithRed:green:blue:alpha:
+    0x7f114 colorWithWhite:alpha:
+    0x7f12a commonInit
+    0x7f135 compare:options:
+    0x7ceca completionBlock
+    0x7f146 completionHandler
+    0x7f158 components:fromDate:
+    0x7f16d componentsJoinedByString:
+    0x7f187 componentsSeparatedByCharactersInSet:
+    0x7f1ad componentsSeparatedByString:
+    0x7f1ca composition
+    0x7f258 configuration
+    0x7f266 configurationWithPointSize:weight:
+    0x7f289 configureClearCacheNowCell:
+    0x7f2a5 configureClearCacheOnStartupCell:
+    0x7f2c7 configureWithImage:name:isSelected:
+    0x7cef8 connectedScenes
+    0x7f2ff constraintEqualToAnchor:
+    0x7f318 constraintEqualToAnchor:constant:
+    0x7f33a constraintEqualToConstant:
+--
+    0x7f4c3 convertPoint:toView:
+    0x7f4d8 convertRect:fromView:
+    0x7c332 cookies
+    0x7f4ee copy
+    0x7f4f3 copyItemAtURL:toURL:error:
+    0x7f50e count
+    0x7f514 countByEnumeratingWithState:objects:count:
+    0x7f555 creationRequestForAssetFromImage:
+    0x7f577 creationRequestForAssetFromImageAtFileURL:
+    0x7f5a2 creationRequestForAssetFromVideoAtFileURL:
+    0x7f5de currentAweme
+    0x7cf4c currentCalendar
+    0x7f5eb currentDevice
+    0x7f5f9 currentHandler
+    0x7f608 currentIconTheme
+    0x7c363 currentLanguage
+    0x7f619 currentPlayingStory
+    0x7f62d currentRunLoop
+    0x7f63c currentSelectedTheme
+    0x7f651 customView
+    0x7f65c cv
+    0x7f66b dataForKey:error:
+    0x7f691 dataForKey:service:accessGroup:error:
+    0x7f6d1 dataTaskWithRequest:completionHandler:
+    0x7f6f8 dataTaskWithURL:completionHandler:
+    0x7f71b dataUsingEncoding:
+    0x7f72e dataWithContentsOfURL:
+    0x7f745 dataWithData:
+    0x7f753 dataWithJSONObject:options:error:
+    0x7c3be dataWithLength:
+    0x7f775 date
+    0x7cff0 dateFromString:
+    0x7f7a9 defaultCenter
+    0x7f7b7 defaultManager
+    0x7f7e2 defaultService
+    0x7f7f1 defaultStore
+    0x7f7fe delegate
+--
+    0x7fa83 drawBadge:selected:
+    0x7fa97 drawInRect:
+    0x7faa3 drawInRect:withAttributes:
+    0x7fac8 duration
+    0x7fad1 effectView
+    0x7fadc effectWithStyle:
+    0x7faed enumerateIndexesUsingBlock:
+    0x7fb09 enumerateKeysAndObjectsUsingBlock:
+    0x7fb2c enumerateObjectsUsingBlock:
+    0x7fb48 enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:
+    0x7fb89 ephemeralSessionConfiguration
+    0x7fba7 errorLabel
+    0x7fbb2 errorWithDomain:code:userInfo:
+    0x7fbd1 evaluateWithObject:
+    0x7fbf6 exportAsynchronouslyWithCompletionHandler:
+    0x7fc21 fileExistsAtPath:
+    0x7fc51 fileSystemRepresentation
+    0x7fc6a fileURLWithPath:
+    0x7fc7b fill
+    0x7fc80 findDiggGesture:
+    0x7fc91 finishWritingWithCompletionHandler:
+    0x7fcbe fireClick
+    0x7fcc8 firstItem
+    0x7fcd2 firstObject
+    0x7fced folderSizeAtPath:fileManager:
+    0x7fd0b followStatus
+    0x7fd18 followerStatus
+    0x7fd27 font
+    0x7fd2c fontWithName:size:
+    0x7fd3f footerTapCount
+    0x7fd4e footerTapTimer
+    0x7fd7d fractionCompleted
+    0x7fd8f frame
+    0x7fd95 generalPasteboard
+    0x7fdb8 gestureRecognizers
+    0x7fdcb getBaseHTMLTemplate
+    0x7d087 getCheckoutForBuyNewHTMLContent
+    0x7fdf0 getCheckoutForStoreADDHTMLContent
+    0x7fe12 getCheckoutForStoreBuyHTMLContent
+    0x7fe34 getCheckoutForSubscribeHTMLContent
+    0x7fe57 getCurrentSeasonEmoji
+    0x7fe6d getHTMLContentForMode:
+    0x7fe84 getPaymentURLForMethod:type:
+    0x7feab getResourceValue:forKey:error:
+    0x7fed9 getValue:
+    0x7fee3 graceTime
+    0x7feed graceTimer
+    0x7fef8 handleBuyNewPayment:
+    0x7ff0d handleFailureInMethod:object:file:lineNumber:description:
+    0x7c479 handlePaymentWithScheme:method:
+    0x7ffab handleRenewalPayment:
+    0x7ffc1 handleStoreAddPayment:
+    0x7ffd8 handleStoreBuyPayment:
+    0x8000b hasAd
+    0x80011 hasFinished
+    0x8001d hasMusic
+    0x80026 hasPrefix:
+    0x80036 headerView
+    0x80041 heightAnchor
+    0x8004e hideAnimated:
+    0x80075 hideDelayTimer
+    0x8009d hideLoadingIndicator
+    0x800b2 hideUsingAnimation:
+    0x800d9 host
+    0x800de hostVC
+    0x800f3 iconImageView
+    0x7d0c2 iconThemeButton
+    0x80101 iconThemes
+    0x8010c identifierForVendor
+    0x80120 image
+    0x80126 imageNamed:inBundle:compatibleWithTraitCollection:
+    0x80159 imageView
+    0x80163 imageWithCGImage:
+    0x80175 imageWithData:
+    0x80184 imageWithRenderingMode:
+    0x8019c impactOccurred
+    0x801ab indexPathForItem:inSection:
+    0x80226 indexSetWithIndexesInRange:
+    0x80260 indicator
+    0x8026a infoDictionary
+    0x7c4bd initWithActivityIndicatorStyle:
+    0x8027e initWithActivityItems:applicationActivities:
+    0x802ab initWithArray:
+    0x802ba initWithAsset:presetName:
+    0x802d4 initWithBase64EncodedString:options:
+    0x802f9 initWithBytes:length:encoding:
+    0x80318 initWithCheckoutMode:
+    0x8033d initWithCustomView:
+    0x80351 initWithData:encoding:
+    0x7d0ed initWithEffect:
+    0x80382 initWithFrame:
+    0x80391 initWithFrame:collectionViewLayout:
+    0x803b5 initWithFrame:configuration:
+    0x803d2 initWithFrame:style:
+    0x803e7 initWithHost:
+    0x803f5 initWithImage:
+    0x80404 initWithImage:style:target:action:
+    0x80427 initWithItems:
+    0x80436 initWithKeyPath:type:
+    0x80476 initWithModel:photoURLs:thumbURLs:isVids:cachedImages:
+    0x804ad initWithRootViewController:
+    0x804e6 initWithServer:protocolType:authenticationType:
+    0x80527 initWithService:accessGroup:
+    0x7c4ff initWithString:
+    0x80544 initWithStyle:
+    0x80553 initWithStyle:reuseIdentifier:
+    0x80572 initWithSuiteName:
+    0x80585 initWithTarget:action:
+    0x8059c initWithTitle:style:target:action:
+    0x805bf initWithURL:
+    0x805cc initWithURL:fileType:error:
+    0x805e8 initWithView:
+    0x805f6 initWithWhite:alpha:
+    0x8060b insertArrangedSubview:atIndex:
+    0x8062a insertObject:atIndex:
+    0x80640 insertSubview:atIndex:
+    0x80657 insertTimeRange:ofTrack:atTime:error:
+    0x8067d intValue
+    0x80686 integerForKey:
+    0x80695 integerValue
+    0x806b8 intrinsicContentSize
+    0x806cd invalidate
+    0x806d8 isAds
+    0x80722 isAutoLanguageMode
+    0x80750 isDragging
+    0x8075b isEqual:
+    0x80764 isEqualToString:
+    0x80784 isHidden
+    0x8078d isHighlighted
+    0x8079b isHomePage
+    0x807e4 isKeyWindow
+    0x807ff isMainThread
+    0x8081d isOn
+    0x80838 isReadyForMoreMediaData
+    0x80850 isRunning
+    0x8085a isSoftAds
+    0x80864 isSquare
+    0x7c52b isStory
+    0x80879 isTikTokStory
+    0x80887 isUserRecommendBigCard
+    0x8089e isValidEmail:
+    0x808ac isValidLicenseKey:
+    0x808bf isVids
+    0x808c6 isViewLoaded
+    0x7d147 isWaitingForTap
+    0x808e9 isoCountryCode
+    0x808f8 item
+    0x7c54b itemClassObject
+    0x80907 items
+    0x80994 keyChainStoreWithService:accessGroup:
+    0x809ba keyWindow
+    0x809c4 label
+    0x809ca label2
+    0x809d1 labelColor
+    0x809dc largeDetent
+    0x809e8 lastObject
+    0x809f3 layer
+    0x809f9 layoutIfNeeded
+    0x80a17 leadingAnchor
+    0x80a25 length
+    0x80a2c lightGrayColor
+    0x80a3b lineColor
+    0x80a45 lineWidth
+    0x80a6c loadCheckoutContent
+    0x80a92 loadHTMLString:baseURL:
+    0x80aaa loadPaymentURL:openExternally:
+    0x80ac9 loadRequest:
+    0x80ad6 loadedImage
+    0x80aee localeWithLocaleIdentifier:
+    0x80b0a localizations
+    0x80b2d localizedDescription
+    0x80b42 localizedStringForKey:value:table:
+    0x80b65 logActivation
+    0x7d19a lowercaseString
+    0x80bcd mainBundle
+    0x80bd8 mainRunLoop
+    0x80be4 mainScreen
+    0x80c04 manuallyChangeIcon:
+    0x80c18 margin
+    0x80c1f markAsFinished
+    0x80c46 mediumDetent
+    0x80c53 minShowTime
+    0x80c5f minShowTimer
+    0x7c578 minSize
+    0x80c6c mobileCountryCode
+    0x80c7e mobileNetworkCode
+    0x80c90 mode
+    0x80c95 model
+    0x80c9b month
+    0x80ca1 music
+    0x80ca7 musicSwitch
+    0x80cb3 music_artistName
+    0x80cc4 music_songName
+    0x80cd3 mutableBytes
+    0x80ce0 mutableCopy
+    0x80cec name
+    0x80cf1 nameLabel
+    0x80cfb navigationController
+    0x80d10 navigationItem
+    0x80d1f needSortMethod
+    0x80d2e needsUpdateConstraints
+    0x80d45 nextResponder
+    0x80d53 nickname
+    0x80d5c null
+    0x80d61 numberOfMatchesInString:options:range:
+    0x7d1c4 numberWithBool:
+    0x80dc7 numberWithDouble:
+    0x80dd9 numberWithFloat:
+    0x80dea numberWithInteger:
+    0x80dfd numberWithUnsignedInteger:
+--
+    0x8121c postNotificationName:object:userInfo:
+    0x81242 predicateWithFormat:
+    0x81257 preferredLanguages
+    0x8126a presentViewController:animated:completion:
+    0x81295 presentedViewController
+    0x812ad presentingViewController
+    0x7c5e2 prettify:items:
+    0x812c6 progress
+    0x812f7 progressColor
+    0x81305 progressObject
+    0x81314 progressObjectDisplayLink
+    0x81345 progressTintColor
+    0x81357 promptForActivation
+    0x8137a promptForLicenseKeyWithEmail:
+    0x81398 promptForRestore
+    0x813b6 protocolTypeObject
+    0x813c9 pushViewController:animated:
+    0x813e6 query
+    0x813ec raise:format:
+    0x813fa rangeOfFirstMatchInString:options:range:
+    0x81423 rangeOfString:
+    0x81432 rangeOfString:options:
+    0x81464 recommendUrl
+    0x81471 redColor
+    0x814e0 regionCodes
+    0x814ec registerClass:forCellWithReuseIdentifier:
+    0x81516 registerForNotifications
+    0x8152f regularExpressionWithPattern:options:error:
+    0x81576 relayoutTabBar
+    0x8158c reloadData
+    0x81597 reloadItemsAtIndexPaths:
+    0x815b0 reloadRowsAtIndexPaths:withRowAnimation:
+    0x815d9 removeAllAnimations
+    0x815ed removeAllCachedResponses
+    0x81606 removeAllIndexes
+    0x81666 removeAllItemsForService:accessGroup:error:
+    0x81692 removeAllItemsWithError:
+    0x816ab removeConstraints:
+    0x816be removeFromSuperViewOnHide
+    0x816d8 removeFromSuperview
+    0x816ec removeIndex:
+    0x816f9 removeItemAtPath:error:
+    0x81711 removeItemAtURL:error:
+    0x81728 removeItemForKey:
+    0x8173a removeItemForKey:error:
+    0x81792 removeItemForKey:service:accessGroup:error:
+    0x817be removeMotionEffect:
+    0x817d2 removeObject:
+    0x817e0 removeObjectAtIndex:
+    0x817f5 removeObjectForKey:
+    0x7c678 removeObserver:
+    0x81809 removeObserver:name:object:
+    0x81825 removePersistentDomainForName:
+    0x81844 removeScriptMessageHandlerForName:
+    0x81892 removeTarget:action:forControlEvents:
+    0x7c696 request
+    0x8192d requestMediaDataWhenReadyOnQueue:usingBlock:
+    0x8195a requestSharedWebCredentialForDomain:account:completion:
+    0x7d2bf requestWithURL:
+    0x819e1 resetWithCompletionHandler:
+    0x81a11 restoreLicenseWithEmail:
+    0x81a2a resume
+    0x81a44 retryButton
+    0x81a5d reverseObjectEnumerator
+    0x81a75 rightBarButtonItems
+    0x81a89 rootViewController
+    0x7c6b3 row
+    0x81a9c saBtn
+    0x81aa2 safeAreaLayoutGuide
+    0x81ad7 saveAuthenticationState:withExpirationDate:email:licenseKey:deviceIdentifier:sessionToken:timestamp:
+    0x81b55 scale
+    0x81b5b scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:
+    0x81b9c scheme
+    0x81ba3 scrollToNextVideo
+    0x81bb5 scrollView
+    0x81d7c secondItem
+    0x81d87 secondaryLabelColor
+    0x81d9b secondarySystemBackgroundColor
+    0x81dba secondarySystemGroupedBackgroundColor
+    0x7c6ce section
+    0x81de0 securityError:
+    0x81def segmentCellForTable:title:subtitle:imageName:segments:key:defaultVal:action:
+    0x81e3c selected
+    0x81e45 selectedCount
+    0x81e53 selectedSegmentIndex
+    0x81e68 selectionIndicator
+    0x81e80 semanticContentAttribute
+    0x81ea4 sendInstallationStats
+    0x81eba server
+    0x81f0a serviceSubscriberCellularProviders
+    0x81f2d sessionWithConfiguration:
+    0x7c711 set
+    0x81f80 setAccessibilityLabel:
+    0x81f97 setAccessoryType:
+    0x81fa9 setAccessoryView:
+    0x81fbb setActivityIndicator:
+    0x81fd1 setAdjustsFontSizeToFitWidth:
+    0x81fef setAllowsGroupOpacity:
+    0x82006 setAllowsInlineMediaPlayback:
+    0x82024 setAlpha:
+    0x8202e setAlternateIconName:completionHandler:
+    0x82068 setAnnular:
+    0x8208d setAutoLanguageMode:
+    0x820a2 setAutoresizingMask:
+    0x820b7 setAutoreverses:
+    0x820d6 setBackgroundColor:
+    0x820ea setBackgroundTintColor:
+    0x82102 setBarButtonItem:
+    0x82114 setBezelConstraints:
+    0x82129 setBezelMotionEffects:
+    0x7d35c setBool:forKey:
+    0x7c731 setBorderColor:
+    0x7d37f setBorderWidth:
+    0x82165 setBounces:
+    0x7c757 setCachePolicy:
+    0x82171 setCachedCacheSize:
+    0x82196 setCancelsTouchesInView:
+    0x821af setCenter:
+    0x821ba setCheckoutMode:
+    0x821cb setClickTimer:
+--
+    0x82b5f setOutputURL:
+    0x82b6d setOverrideUserInterfaceStyle:
+    0x82b8c setPaddingConstraints:
+    0x82ba3 setPermittedArrowDirections:
+    0x7d47c setPlaceholder:
+    0x82bce setPreferredCornerRadius:
+    0x82be8 setPrefersGrabberVisible:
+    0x82c02 setPriority:
+    0x82c0f setProgress:
+    0x82c1c setProgressColor:
+    0x82c41 setProgressObjectDisplayLink:
+    0x82c7a setProgressTintColor:
+    0x7c843 setRegionCodes:
+    0x82c9b setRemoveFromSuperViewOnHide:
+    0x7d4a2 setRepeatCount:
+    0x82cb9 setRequestCachePolicy:
+    0x7c867 setRetryButton:
+    0x82ce8 setRightBarButtonItem:
+    0x82cff setRightBarButtonItems:
+    0x82d17 setSaBtn:
+    0x82d21 setSectionHeaderTopPadding:
+    0x82d3d setSectionInset:
+    0x82d5b setSelectedCount:
+    0x82d6d setSelectedSegmentIndex:
+    0x82d86 setSelectionIndicator:
+    0x82d9d setSelectionStyle:
+    0x7d4bd setShadowColor:
+    0x82db0 setShadowOffset:
+    0x82dc1 setShadowOpacity:
+    0x82dd3 setShadowRadius:
+    0x82de4 setSharedPassword:forAccount:completion:
+    0x7c88c setShouldOptimizeForNetworkUse:
+    0x7d4df setShowStarted:
+    0x82e1a setSourceRect:
+    0x82e29 setSourceView:
+    0x82e43 setStableClearModeEnabled:
+    0x82e5e setStandardAppearance:
+--
+    0x83266 setTranslation:inView:
+    0x83290 setType:
+    0x83299 setUIDelegate:
+    0x832a8 setUseAnimation:
+    0x832d1 setUserContentController:
+    0x832eb setUserInteractionEnabled:
+    0x83306 setValue:forHTTPHeaderField:
+    0x83323 setValue:forKey:
+    0x8333f setWaitsForConnectivity:
+    0x83358 setWebView:
+    0x83364 setWithObject:
+    0x83373 setZPosition:
+    0x83381 settingsTkVerify
+    0x7c90a setupDownloadsControllerttkView
+    0x7d541 setupErrorViews
+    0x83392 setupLoadingIndicator
+    0x833a8 setupViews
+    0x833b3 setupWebView
+    0x833c0 sharedApplication
+    0x833de sharedHTTPCookieStorage
+    0x833f6 sharedInstance
+    0x83405 sharedManager
+    0x83456 sharedPhotoLibrary
+    0x83469 sharedSession
+    0x83477 sharedURLCache
+    0x83486 sheetPresentationController
+    0x834a2 showAlertWithTitle:description:image:actionButtonTitle:cancelButtonTitle:actionBlock:cancelBlock:
+    0x83504 showAnimated:
+    0x83512 showCleanerOptions
+    0x83525 showCompleteResetAlert
+    0x8353c showCountPickerWithCompletion:
+    0x8355b showCustomAlertWithTitle:message:
+    0x8357d showCustomIconChangeAlert:
+    0x83598 showDeepWipeAlert
+    0x835aa showError:
+    0x835b5 showFastWipeAlert
+    0x835c7 showHUDAddedTo:animated:
+    0x835f1 showInvalidLicenseText
+    0x8361b showLoadingIndicator
+    0x83630 showMadeInMessage
+    0x8364b showMissingIconsAlert
+    0x83661 showNoInternetText
+    0x83674 showRestoreProcessChangedAlert
+    0x83693 showStarted
+    0x836ac showSuccessAlert:message:
+    0x836c6 showSuccessAlert:message:shouldExit:
+    0x836eb showUnbanModeAlert
+    0x836fe showUnlinkConfirmationForKey:email:device:
+    0x83729 showUsingAnimation:
+    0x8373d showWipeKeychainAlert
+    0x8376d signature
+    0x83777 size
+    0x8377c sizeToFit
+    0x83786 sizeWithAttributes:
+    0x8379a sleepForTimeInterval:
+    0x837b7 standardUserDefaults
+    0x837d2 startAnimating
+    0x837e1 startClicking
+    0x837ef startSessionAtSourceTime:
+    0x83809 startWriting
+    0x83816 state
+    0x8381c status
+    0x83842 statusCode
+    0x8384d stopAnimating
+    0x8385b stopClicking
+    0x83889 string
+    0x83890 stringByAddingPercentEncodingWithAllowedCharacters:
+    0x838c4 stringByAppendingFormat:
+    0x7c938 stringByAppendingPathComponent:
+    0x838dd stringByAppendingString:
+    0x838f6 stringByReplacingMatchesInString:options:range:withTemplate:
+    0x83933 stringByReplacingOccurrencesOfString:withString:
+    0x83964 stringByTrimmingCharactersInSet:
+    0x83985 stringForKey:
+    0x83993 stringForKey:error:
+    0x839bd stringForKey:service:accessGroup:
+    0x839df stringForKey:service:accessGroup:error:
+    0x7d55f stringFromByteCount:countStyle:
+    0x83a23 stringWithCString:encoding:
+    0x83a3f stringWithCapacity:
+    0x83a53 stringWithCharacters:length:
+    0x83a70 stringWithFormat:
+    0x83a82 stringWithString:
+    0x83a94 stringWithUTF8String:
+    0x83aaa stroke
+    0x83ab1 style
+    0x83ab7 substringFromIndex:
+--
+    0x84bd9 ttk_downloadToPhotos:
+    0x84bef ttk_fixTabLabelSpacing
+    0x84c62 ttk_installAvatarGesture
+    0x84c7b ttk_installBioLongPress
+    0x84c93 ttk_installEyeButtonIfNeeded
+    0x84cb0 ttk_installProfileLongPress
+    0x84d00 ttk_refreshProfileBadges
+    0x84d19 ttk_refreshVideoCountLabel
+    0x84d6f ttk_showLegacySheet:model:vc:
+    0x84da5 ttk_updateDateLabel
+    0x84db9 ttk_v2UpdateFollowBadge
+    0x84dd1 unexpectedError:
+    0x84de2 unlinkEmailFromKey:email:device:
+    0x84e03 unregisterFromNotifications
+    0x84e1f unsignedIntegerValue
+    0x84e34 unsignedLongLongValue
+    0x84e4a updateAppearance
+    0x84e5b updateBezelMotionEffects
+    0x7ca23 updateBottomBar
+    0x84e95 updateForBackgroundStyle
+    0x84eae updateForCurrentOrientationAnimated:
+    0x84ed3 updateIconThemeButton
+    0x84ee9 updateIndicators
+    0x84f11 updatePaddingConstraints
+    0x84f75 updateViewsForColor:
+    0x7ca44 uppercaseString
+    0x84f8a useAnimation
+    0x84fab user
+    0x84fb0 userContentController
+    0x84ff5 userInfo
+    0x84ffe userInterfaceIdiom
+    0x85011 userInterfaceLayoutDirectionForSemanticContentAttribute:
+    0x8504a userInterfaceStyle
+    0x8505d uuid
+    0x85062 uuidForDevice
+    0x85070 uuidForDeviceMigratingValue:commitMigration:
+    0x850d0 uuidForDeviceMigratingValueForKey:service:accessGroup:commitMigration:
+    0x85152 uuidForDevice_updateWithValue:
+    0x85171 uuidForInstallation
+    0x85185 uuidForKey:
+    0x85191 uuidForSession
+    0x851a0 uuidForVendor
+    0x851ae uuidValueIsValid:
+    0x851c0 uuidsOfUserDevices
+    0x851d3 uuidsOfUserDevicesExcludingCurrentDevice
+    0x8521d uuidsOfUserDevices_iCloudInit
+    0x8523b uuidsOfUserDevices_iCloudSync
+    0x85259 uuidsOfUserDevices_updateWithValue:
+    0x8527d valueForKey:
+    0x8528a valueWithBytes:objCType:
+    0x852a3 valueWithNonretainedObject:
+    0x852bf verifyLicenseWithEmail:licenseKey:deviceIdentifier:
+    0x852f3 verifyLicenseWithEmail:licenseKey:deviceIdentifier:completion:
+    0x85332 video
+    0x85344 view
+    0x853a5 viewWithTag:
+    0x7ca60 webView
+    0x85ae6 whiteColor
+    0x85af1 whitespaceAndNewlineCharacterSet
+    0x85b12 widthAnchor
+    0x85b1e window
+    0x7d68d windows
+    0x85b25 writeToFile:atomically:
+    0x85b3d writeToURL:atomically:
+    0x83b84 synchronizeWithError:
+    0x80516 initWithService:
+    0x804c9 initWithServer:protocolType:
+    0x7f45f contains:
+    0x82ea5 setString:forKey:error:
+    0x82ebd setString:forKey:genericAttribute:
+    0x82ee0 setString:forKey:genericAttribute:error:
+    0x7d4fa setString:forKey:label:comment:
+    0x82f40 setString:forKey:label:comment:error:
+    0x7f65f dataForKey:
+    0x7c780 setData:forKey:
+    0x82366 setData:forKey:error:
+    0x8239d setData:forKey:genericAttribute:error:
+    0x823f9 setData:forKey:label:comment:
+    0x81617 removeAllItems
+    0x7cd75 allKeys
+    0x81f59 setAccessibility:authenticationPolicy:
+    0x83438 sharedPasswordWithCompletion:
+    0x83413 sharedPasswordForAccount:completion:
+    0x81867 removeSharedPasswordForAccount:completion:
+    0x7f77a debugDescription
+    0x808fd itemClass
+    0x7d347 service
+    0x7daa0 accessGroup
+    0x813a9 protocolType
+    0x7e1ac authenticationType
+    0x7daac accessibility
+--
+    0x841d2 tableView:numberOfRowsInSection:
+    0x844fd tableView:titleForHeaderInSection:
+    0x844da tableView:titleForFooterInSection:
+    0x83da8 tableView:cellForRowAtIndexPath:
+    0x83f75 tableView:didSelectRowAtIndexPath:
+    0x84fc6 userContentController:didReceiveScriptMessage:
+    0x85702 webView:didStartProvisionalNavigation:
+    0x8566e webView:didFinishNavigation:
+    0x85619 webView:didFailNavigation:withError:
+    0x8563e webView:didFailProvisionalNavigation:withError:
+    0x85543 webView:decidePolicyForNavigationAction:decisionHandler:
+    0x85873 webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:
+    0x8136b promptForEmail
+    0x7e577 checkEmailAndProceed:
+    0x7e513 checkAuthenticationStatus
+    0x7d233 provideFeedback
+    0x7c391 dailyCheckTimer
+    0x82352 setDailyCheckTimer:
+    0x8509d uuidForDeviceMigratingValueForKey:commitMigration:
+    0x85117 uuidForDeviceMigratingValueForKey:service:commitMigration:
+    0x7f53f createIconThemeButton
+    0x8455e tableView:viewForFooterInSection:
+    0x840d3 tableView:heightForFooterInSection:
+    0x8404d tableView:estimatedHeightForFooterInSection:
+    0x8411b tableView:heightForRowAtIndexPath:
+    0x7fddf getCacheSizeFast
+    0x7ff8f handleNoGesture:
+    0x82785 setIconThemeButton:
+    0x825a5 setDefaultService:
+    0x8090d keyChainStore
+    0x8097a keyChainStoreWithService:
+    0x8091b keyChainStoreWithServer:protocolType:
+    0x80941 keyChainStoreWithServer:protocolType:authenticationType:
+    0x839a7 stringForKey:service:
+    0x83a07 stringForKey:service:error:
+    0x82f66 setString:forKey:service:
+    0x7c8e1 setString:forKey:service:error:
+    0x83046 setString:forKey:service:genericAttribute:
+    0x83071 setString:forKey:service:genericAttribute:error:
+    0x82f80 setString:forKey:service:accessGroup:
+    0x82fa6 setString:forKey:service:accessGroup:error:
+    0x82fd2 setString:forKey:service:accessGroup:genericAttribute:
+    0x7f67d dataForKey:service:
+    0x7f6b7 dataForKey:service:error:
+    0x7cfb4 dataForKey:service:accessGroup:
+    0x8243b setData:forKey:service:
+    0x82511 setData:forKey:service:error:
+    0x8252f setData:forKey:service:genericAttribute:
+    0x82558 setData:forKey:service:genericAttribute:error:
+    0x82453 setData:forKey:service:accessGroup:
+    0x82477 setData:forKey:service:accessGroup:error:
+    0x824a1 setData:forKey:service:accessGroup:genericAttribute:
+    0x81752 removeItemForKey:service:
+    0x7d26b removeItemForKey:service:error:
+    0x8176c removeItemForKey:service:accessGroup:
+    0x81626 removeAllItemsForService:
+    0x7c63a removeAllItemsForService:error:
+--
+    0x7ede2 collectionView:targetContentOffsetForProposedContentOffset:
+    0x7e6dc collectionView:canEditItemAtIndexPath:
+    0x7ed7b collectionView:shouldSpringLoadItemAtIndexPath:withContext:
+    0x7ec7e collectionView:shouldBeginMultipleSelectionInteractionAtIndexPath:
+    0x7c263 collectionView:didBeginMultipleSelectionInteractionAtIndexPath:
+    0x7f098 collectionViewDidEndMultipleSelectionInteraction:
+    0x7e8cb collectionView:contextMenuConfigurationForItemsAtIndexPaths:point:
+    0x7e83e collectionView:contextMenuConfiguration:highlightPreviewForItemAtIndexPath:
+    0x7e7f2 collectionView:contextMenuConfiguration:dismissalPreviewForItemAtIndexPath:
+    0x7f04e collectionView:willPerformPreviewActionForMenuWithConfiguration:animator:
+    0x7ef7d collectionView:willDisplayContextMenuWithConfiguration:animator:
+    0x7f006 collectionView:willEndContextMenuInteractionWithConfiguration:animator:
+    0x7ec01 collectionView:sceneActivationConfigurationForItemAtIndexPath:point:
+    0x7e88a collectionView:contextMenuConfigurationForItemAtIndexPath:point:
+    0x7ebbe collectionView:previewForHighlightingContextMenuWithConfiguration:
+    0x7eb7d collectionView:previewForDismissingContextMenuWithConfiguration:
+    0x845f2 tableView:willDisplayCell:forRowAtIndexPath:
+    0x84687 tableView:willDisplayHeaderView:forSection:
+    0x8465b tableView:willDisplayFooterView:forSection:
+    0x83e94 tableView:didEndDisplayingCell:forRowAtIndexPath:
+    0x83ef7 tableView:didEndDisplayingHeaderView:forSection:
+    0x83ec6 tableView:didEndDisplayingFooterView:forSection:
+    0x840f7 tableView:heightForHeaderInSection:
+    0x840a7 tableView:estimatedHeightForRowAtIndexPath:
+    0x8407a tableView:estimatedHeightForHeaderInSection:
+    0x84580 tableView:viewForHeaderInSection:
+    0x83cab tableView:accessoryTypeForRowWithIndexPath:
+    0x83c77 tableView:accessoryButtonTappedForRowWithIndexPath:
+    0x84373 tableView:shouldHighlightRowAtIndexPath:
+    0x83f4f tableView:didHighlightRowAtIndexPath:
+    0x83f98 tableView:didUnhighlightRowAtIndexPath:
+    0x8473b tableView:willSelectRowAtIndexPath:
+    0x845cc tableView:willDeselectRowAtIndexPath:
+    0x83e6f tableView:didDeselectRowAtIndexPath:
+    0x83d74 tableView:canPerformPrimaryActionForRowAtIndexPath:
+    0x84229 tableView:performPrimaryActionForRowAtIndexPath:
+    0x84024 tableView:editingStyleForRowAtIndexPath:
+--
+    0x8425a tableView:previewForDismissingContextMenuWithConfiguration:
+    0x846f6 tableView:willPerformPreviewActionForMenuWithConfiguration:animator:
+    0x8461f tableView:willDisplayContextMenuWithConfiguration:animator:
+    0x846b3 tableView:willEndContextMenuInteractionWithConfiguration:animator:
+    0x83cd7 tableView:canEditRowAtIndexPath:
+    0x83d1a tableView:canMoveRowAtIndexPath:
+    0x7d31b sectionIndexTitlesForTableView:
+    0x842d4 tableView:sectionForSectionIndexTitle:atIndex:
+    0x83dc9 tableView:commitEditingStyle:forRowAtIndexPath:
+    0x841a8 tableView:moveRowAtIndexPath:toIndexPath:
+    0x8557c webView:decidePolicyForNavigationAction:preferences:decisionHandler:
+    0x855c1 webView:decidePolicyForNavigationResponse:decisionHandler:
+    0x856c8 webView:didReceiveServerRedirectForProvisionalNavigation:
+    0x855fc webView:didCommitNavigation:
+    0x8568b webView:didReceiveAuthenticationChallenge:completionHandler:
+    0x85ac0 webViewWebContentProcessDidTerminate:
+    0x853d3 webView:authenticationChallenge:shouldAllowDeprecatedTLS:
+    0x85729 webView:navigationAction:didBecomeDownload:
+    0x85755 webView:navigationResponse:didBecomeDownload:
+    0x859b8 webView:shouldGoToBackForwardListItem:willUseInstantBack:completionHandler:
+    0x854f8 webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:
+    0x85aaf webViewDidClose:
+    0x858c2 webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:
+    0x85913 webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:
+    0x8581d webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:
+    0x857be webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:
+    0x85a04 webView:shouldPreviewElement:
+    0x85783 webView:previewingViewControllerForElement:defaultActions:
+    0x8540d webView:commitPreviewingViewController:
+    0x85435 webView:contextMenuConfigurationForElement:completionHandler:
+    0x854ce webView:contextMenuWillPresentForElement:
+    0x85498 webView:contextMenuForElement:willCommitWithAnimator:
+    0x85473 webView:contextMenuDidEndForElement:
+    0x85a22 webView:showLockdownModeFirstUseMessage:completionHandler:
+    0x85a86 webView:willPresentEditMenuWithAnimator:
+    0x85a5d webView:willDismissEditMenuWithAnimator:
+    0x85971 webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:
+Contents of (__DATA_CONST,__objc_imageinfo) section
+    version 0
+    flags   0x40
+=== FILTERED NM ===
+                 (undefined) external _AVVideoCodecKey (from AVFoundation)
+                 (undefined) external _AVVideoCodecTypeH264 (from AVFoundation)
+                 (undefined) external _CGColorSpaceCreateDeviceRGB (from CoreGraphics)
+                 (undefined) external _OBJC_CLASS_$_UIActivityIndicatorView (from UIKit)
+                 (undefined) external _OBJC_CLASS_$_UIActivityViewController (from UIKit)
+                 (undefined) external _OBJC_CLASS_$_UIDevice (from UIKit)
+                 (undefined) external _kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly (from Security)
+                 (undefined) external _kSecAttrAccessibleAlwaysThisDeviceOnly (from Security)
+                 (undefined) external _kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly (from Security)
+                 (undefined) external _kSecAttrAccessibleWhenUnlockedThisDeviceOnly (from Security)
+                 (undefined) external _kSecAttrServer (from Security)
