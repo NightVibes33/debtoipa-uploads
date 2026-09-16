@@ -1,0 +1,116 @@
+name: KillerPlus acquire/analyze
+on:
+  push:
+    branches: [temp-killerplus-free-20260916]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: temp-killerplus-free-20260916
+      - name: Acquire packages and inspect binaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf work reports extracted
+          mkdir -p work reports extracted roots
+          : > reports/acquisition.txt
+
+          echo '=== YTKP package mirror ===' | tee -a reports/acquisition.txt
+          git clone --depth=1 https://git.0x0.st/mrdrvt99/YTKP.git work/YTKP 2>&1 | tee -a reports/acquisition.txt || true
+          if [[ -d work/YTKP ]]; then
+            find work/YTKP -maxdepth 7 -type f -print | sort | tee -a reports/acquisition.txt
+            [[ -f work/YTKP/DEBIAN/control ]] && cat work/YTKP/DEBIAN/control | tee -a reports/acquisition.txt || true
+            mkdir -p roots/YTKP
+            cp -R work/YTKP/. roots/YTKP/
+          fi
+
+          echo '=== repo package indexes ===' | tee -a reports/acquisition.txt
+          for idx in Packages Packages.gz Packages.bz2 Packages.xz; do
+            url="https://repo.ikghd.me/$idx"
+            echo "PROBE $url" | tee -a reports/acquisition.txt
+            if curl -fL --connect-timeout 15 --max-time 45 -A 'Cydia/1.1.36' "$url" -o work/index.bin 2>>reports/acquisition.txt; then
+              case "$idx" in
+                *.gz) gzip -dc work/index.bin > work/Packages.txt ;;
+                *.bz2) bzip2 -dc work/index.bin > work/Packages.txt ;;
+                *.xz) xz -dc work/index.bin > work/Packages.txt ;;
+                *) cp work/index.bin work/Packages.txt ;;
+              esac
+              grep -Eai -B8 -A30 'ytkiller|ytkplus|ttkiller|ttkplus|me\.ikghd\.(ytk|ttk)' work/Packages.txt | tee -a reports/acquisition.txt || true
+              break
+            fi
+          done
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, urllib.parse, subprocess
+          p=Path('work/Packages.txt')
+          if p.exists():
+              for st in re.split(r'\n\s*\n', p.read_text(errors='ignore')):
+                  if not re.search(r'(ytkiller|ytkplus|ttkiller|ttkplus|me\.ikghd\.(ytk|ttk))', st, re.I): continue
+                  d={}
+                  for line in st.splitlines():
+                      if ': ' in line:
+                          k,v=line.split(': ',1); d[k]=v
+                  fn=d.get('Filename'); pkg=d.get('Package','pkg'); ver=d.get('Version','v')
+                  if not fn: continue
+                  url=urllib.parse.urljoin('https://repo.ikghd.me/',fn)
+                  out=Path('work')/(re.sub(r'[^A-Za-z0-9_.-]','_',pkg)+'_'+re.sub(r'[^A-Za-z0-9_.-]','_',ver)+'.deb')
+                  print('GET',url,'->',out)
+                  subprocess.run(['curl','-fL','--retry','3','--connect-timeout','15','--max-time','120','-A','Cydia/1.1.36',url,'-o',str(out)],check=False)
+          PY
+
+          n=0
+          while IFS= read -r -d '' deb; do
+            n=$((n+1)); root="roots/deb$n"; mkdir -p "$root"
+            dpkg-deb -x "$deb" "$root" || true
+            dpkg-deb -e "$deb" "$root/DEBIAN" || true
+            echo "=== $deb ===" | tee -a reports/acquisition.txt
+            [[ -f "$root/DEBIAN/control" ]] && cat "$root/DEBIAN/control" | tee -a reports/acquisition.txt || true
+          done < <(find work -type f -name '*.deb' -print0)
+
+          : > reports/machos.tsv
+          mkdir -p reports/files
+          while IFS= read -r -d '' f; do
+            t=$(file -b "$f" || true)
+            [[ "$t" == *Mach-O* ]] || continue
+            rel=${f#roots/}; safe=$(printf '%s' "$rel" | tr '/ ' '__')
+            sha=$(shasum -a 256 "$f" | awk '{print $1}'); sz=$(stat -f '%z' "$f")
+            printf '%s\t%s\t%s\t%s\n' "$rel" "$sz" "$sha" "$t" | tee -a reports/machos.tsv
+            mkdir -p "extracted/$(dirname "$rel")"; cp -p "$f" "extracted/$rel"
+            {
+              echo "FILE=$rel"; echo "SIZE=$sz"; echo "SHA256=$sha"; echo "TYPE=$t"
+              echo '=== LOADS ==='; otool -L "$f" 2>&1 || true
+              echo '=== NM FILTER ==='; nm -m "$f" 2>/dev/null | grep -Eai 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd' || true
+              echo '=== STRING FILTER ==='; strings -a -t x "$f" 2>/dev/null | grep -Eai 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd|https?://' || true
+              echo '=== OBJC FILTER ==='; otool -ov "$f" 2>/dev/null | grep -Eai -B8 -A16 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd' || true
+            } > "reports/files/$safe.txt"
+          done < <(find roots -type f -print0)
+
+          echo '=== HITS ==='
+          grep -RInaE 'licen|activ|purchase|payment|receipt|subscription|premium|trial|restore|unlink|valid|verify|entitl|device|email|killer|ikghd' reports/files | head -n 2000 || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: killerplus-analysis
+          path: reports
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: killerplus-dylibs
+          path: extracted
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Commit reports
+        shell: bash
+        run: |
+          set -e
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          rm -rf analysis && mkdir analysis && cp -R reports/. analysis/
+          git add analysis
+          if ! git diff --cached --quiet; then git commit -m 'temp: KillerPlus analysis'; git push; fi
