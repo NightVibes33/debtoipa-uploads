@@ -1,0 +1,17 @@
+FILE=YTKP/Library/MobileSubstrate/DynamicLibraries/sideloadkeychainfix.dylib
+SIZE=70176
+SHA256=f8d81929c4de5799c9f5cb5b3e7d7410a7374224bef63afe88128f66fc351d79
+TYPE=Mach-O universal binary with 1 architecture: [arm64:Mach-O 64-bit dynamically linked shared library arm64]
+roots/YTKP/Library/MobileSubstrate/DynamicLibraries/sideloadkeychainfix.dylib (for architecture arm64):	Mach-O 64-bit dynamically linked shared library arm64
+=== LOADS ===
+roots/YTKP/Library/MobileSubstrate/DynamicLibraries/sideloadkeychainfix.dylib (architecture arm64):
+	/Library/MobileSubstrate/DynamicLibraries/sideloadKeychainfix.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 1971.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 1971.0.0)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 1500.65.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1319.100.3)
+	/System/Library/Frameworks/Security.framework/Security (compatibility version 1.0.0, current version 60420.102.1)
+=== NM FILTER ===
+=== STRING FILTER ===
+=== OBJC FILTER ===

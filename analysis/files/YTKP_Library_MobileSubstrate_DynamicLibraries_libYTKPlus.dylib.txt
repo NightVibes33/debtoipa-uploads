@@ -1,0 +1,17 @@
+FILE=YTKP/Library/MobileSubstrate/DynamicLibraries/libYTKPlus.dylib
+SIZE=3237056
+SHA256=2daf18b756c564c4d4216137abde8f8354891b1cdb42fca82f64395ce23a6d32
+TYPE=Mach-O 64-bit dynamically linked shared library arm64
+=== LOADS ===
+roots/YTKP/Library/MobileSubstrate/DynamicLibraries/libYTKPlus.dylib:
+	@rpath/libYTKPlus.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/System/Library/Frameworks/Foundation.framework/Foundation (compatibility version 300.0.0, current version 5026.5.4)
+	/System/Library/Frameworks/UIKit.framework/UIKit (compatibility version 1.0.0, current version 9126.5.5)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (compatibility version 150.0.0, current version 5026.5.4)
+=== NM FILTER ===
+                 (undefined) external _UIApplicationDidBecomeActiveNotification (from UIKit)
+                 (undefined) external _sys_icache_invalidate (from libSystem)
+=== STRING FILTER ===
+=== OBJC FILTER ===
