@@ -1,0 +1,57 @@
+name: KillerPlus IPA extraction
+on:
+  push:
+    branches: [temp-killerplus-free-20260916]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: temp-killerplus-free-20260916
+      - name: Download current IPAs
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf ipa-work extracted-dylibs reports
+          mkdir -p ipa-work extracted-dylibs reports
+          UA='Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148'
+          curl -fL --retry 3 --retry-delay 2 -A "$UA" 'https://ikghd.site/ipa/YouTube_21.37_YTKillerPlus_6.5.ipa' -o ipa-work/YouTube_21.37_YTKillerPlus_6.5.ipa
+          curl -fL --retry 3 --retry-delay 2 -A "$UA" 'https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa' -o ipa-work/TikTok_46.9_TTKillerPlus_2.2.ipa
+          shasum -a 256 ipa-work/*.ipa | tee reports/ipa-sha256.txt
+          ls -lh ipa-work/*.ipa | tee reports/ipa-sizes.txt
+      - name: Extract real bundled dylibs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ipa-work/youtube ipa-work/tiktok
+          ditto -x -k ipa-work/YouTube_21.37_YTKillerPlus_6.5.ipa ipa-work/youtube
+          ditto -x -k ipa-work/TikTok_46.9_TTKillerPlus_2.2.ipa ipa-work/tiktok
+          : > reports/dylibs.txt
+          for root in youtube tiktok; do
+            while IFS= read -r -d '' f; do
+              rel=${f#ipa-work/$root/}
+              typ=$(file -b "$f" || true)
+              sha=$(shasum -a 256 "$f" | awk '{print $1}')
+              sz=$(stat -f '%z' "$f")
+              printf '%s\t%s\t%s\t%s\n' "$root/$rel" "$sz" "$sha" "$typ" | tee -a reports/dylibs.txt
+              base=$(basename "$f")
+              if [[ "$base" == *Killer* || "$base" == *YTK* || "$base" == *TTK* ]]; then
+                mkdir -p "extracted-dylibs/$root"
+                cp -p "$f" "extracted-dylibs/$root/$base"
+              fi
+            done < <(find "ipa-work/$root" -type f \( -name '*.dylib' -o -name '*.framework' \) -print0)
+          done
+          find ipa-work/youtube ipa-work/tiktok -type f \( -iname '*YTK*.dylib' -o -iname '*TTK*.dylib' -o -iname '*Killer*.dylib' \) -print | tee reports/killerplus-matches.txt
+          test -s reports/killerplus-matches.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: killerplus-real-ipa-dylibs
+          path: |
+            extracted-dylibs
+            reports
+          retention-days: 7
